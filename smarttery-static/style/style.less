@@ -163,8 +163,8 @@ input,textarea,p,span,button {
 		.lotterycup{
 			position: absolute;
 			left : 10%;
-			width : 40%;/*change*/
-			height : 30%;/*change*/
+			// width : 40%;/*change*/
+			// height : 30%;/*change*/
 			// line-height: @lotterycup_height;
 			margin : 0;
 			top : 38.2%;
@@ -179,7 +179,7 @@ input,textarea,p,span,button {
 			width : 40%;/*change*/
 			// min-height:600px;/*change*/
 			height : 80%;/*change*/
-			max-width : 500px;
+			max-width : 576px;
 			top : 10%;
 			color : #fff;
 			border : 1px #fff solid;
@@ -247,8 +247,8 @@ input,textarea,p,span,button {
 					}
 					&::after{
 						content : "";
-						width : @btn_height/3 ;/*change*/
-						height : @btn_height/3 ;/*change*/
+						width : @btn_height/4 ;/*change*/
+						height : @btn_height/4 ;/*change*/
 						transform : rotateZ(-45deg);
 						-o-transform : rotateZ(-45deg);
 						-moz-transform : rotateZ(-45deg);
@@ -280,6 +280,7 @@ input,textarea,p,span,button {
 						display: inline-block;
 						width : auto;
 						height :100%;
+						font-size : 80%;
 						// margin-left : 0;
 						// position: absolute;
 						// left: 0;
@@ -479,34 +480,35 @@ input,textarea,p,span,button {
 		}
 	}
 }
-// @media only screen and(min-width : 384px) and(max-width : 1024px){
-// 	.lottery-scroll{//scrollwidth还是挺长的
-// 		.lottery-panel{
-// 			@lotterycup_width : 300px;/*280px*/
-// 			@lotterycup_height : 300px;
-// 			.lotterycup{
-// 				width : @lotterycup_width;/*change*/
-// 				height : @lotterycup_height;/*change*/
-// 				// max-width : 
-// 				line-height: @lotterycup_height;
-// 				margin-top : -@lotterycup_height/2;
-// 				left:50%;
-// 				margin-left : -@lotterycup_width*1.5;
-// 				display:none;
-// 				// display: none;
-// 		 	}
-// 		 	//彩票数据展示区
-// 		 	.lotterydata{
-// 				width : 40%;/*change*/
-// 				height : 80%;/*change*/
-// 				right : 10%;
-
-// 			}
-// 		}
-// 	}
-// }
+@media only screen and(min-width : 384px) and(max-width : 1024px){
+	.lottery-scroll{//scrollwidth还是挺长的
+		.lottery-panel{
+			@lotterycup_width : 200px;/*280px*/
+			@lotterycup_height : 200px;
+			.lotterycup{
+				width : 40%;/*change*/
+				height : 30%;/*change*/
+				margin-top : -@lotterycup_height/2;
+				// left :50%;
+				// margin-left : -@lotterycup_width;
+		 	}
+		 	//彩票数据展示区
+		 	.lotterydata{
+				width : 40%;/*change*/
+				height : 80%;/*change*/
+				right : 10%;
+				.curnt_lotry_info{
+					.mid_leng_button{
+						bottom : 5% ;
+						font-size: 100%;
+					}
+				}
+			}
+		}
+	}
+}
 /*i pad mini width*/
-@media screen and(max-width : 384px){
+@media screen and(max-width : 576px){//384px
 	.lottery-scroll{//scrollwidth还是挺长的
 		.lottery-panel{
 			.lotterycup{
@@ -521,6 +523,7 @@ input,textarea,p,span,button {
 				width : 100%;/*change*/
 				height : 100%;/*change*/
 				right : 0;
+				left : 0;
 				top : 0;
 				.curnt_lotry_info{
 					height : 100%;
