@@ -179,11 +179,12 @@ input,textarea,p,span,button {
 			width : 40%;/*change*/
 			// min-height:600px;/*change*/
 			height : 80%;/*change*/
+			max-width : 500px;
 			top : 10%;
 			color : #fff;
 			border : 1px #fff solid;
 			position: absolute;
-			right : 10%;
+			left : 50%;
 			font-family: '微软雅黑';
 			font-size: 15px;
 			font-weight : lighter;
@@ -517,9 +518,16 @@ input,textarea,p,span,button {
 		 	}
 		 	//彩票数据展示区
 		 	.lotterydata{
-				width : 90%;/*change*/
-				height : 70%;/*change*/
-				right : 5%;
+				width : 100%;/*change*/
+				height : 100%;/*change*/
+				right : 0;
+				top : 0;
+				.curnt_lotry_info{
+					height : 100%;
+					.mid_leng_button{
+						bottom : 5% ;
+					}
+				}
 			}
 		}
 	}
