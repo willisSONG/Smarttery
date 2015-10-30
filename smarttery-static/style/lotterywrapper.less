@@ -1,0 +1,57 @@
+.nextnumsection{
+	display : box;
+	display : flex;
+	display : -webkit-flex;
+	display : -ms-flexbox;
+	border : 1px solid #fff;
+	flex-wrap : wrap;
+	-webkit-flex-wrap : wrap;
+	-moz-flex-wrap : wrap;
+	-o-flex-wrap : wrap;
+	-ms-flex-wrap : wrap;
+	flex-direction : column ;
+	-webkit-flex-direction : column ;
+	-ms-flex-direction : column ;
+	-o-flex-direction : column ;
+	-moz-flex-direction : column ;
+	align-content : center;
+	/*基于基线对齐*/
+	align-items : baseline;
+	-moz-align-items : baseline;
+	-ms-align-items : baseline;
+	-webkit-align-items : baseline;
+	-o-align-items : baseline;
+	height : 50%;
+	justify-content : center;
+	-webkit-justify-content : center;
+	-ms-justify-content : center;
+	-moz-justify-content : center;
+	-o-justify-content : center;
+	.lotterynums{
+		display: flex;
+		margin-top: 10px;
+		padding: 0;
+
+		// border : 1px solid;
+		li{
+			display : block;
+			margin: 0;
+			padding: 0;
+			list-style-type : none;
+			width : 30px;
+			height : 30px;
+			line-height:30px;
+			border-radius : 16px ;
+			border : 1px solid rgba(255,255,255,.7);
+			color : #b45b3e;
+			text-align : center;
+			background : linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.3));
+			background : -moz-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.3));
+			background : -ms-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.3));
+			background : -webkit-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.3));
+			background : -webkit-gradient(linear,30% 0,from(rgba(255,255,255,1)) 60%,color-stop(rgba(100,100,100,.5)));
+			margin-left : 5px;
+			 // list-style : none;
+		}
+	}
+}
