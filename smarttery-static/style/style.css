@@ -1,0 +1,1359 @@
+/* line 6, style.less */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  min-width: 100%;
+  height: 100%;
+  font: Arial 25px/30px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  perspective: 100;
+  -o-perspective: 100;
+  -moz-perspective: 100;
+  -webkit-perspective: 100;
+  -ms-perspective: 100;
+  perpective-origin: 0 50%;
+  -moz-perpective-origin: 0 50%;
+  -ms-perpective-origin: 0 50%;
+  -o-perpective-origin: 0 50%;
+  -webkit-perpective-origin: 0 50%;
+}
+/* line 29, style.less */
+input,
+textarea,
+p,
+span,
+button {
+  font-family: inherit;
+  color: inherit;
+  background-color: inherit;
+}
+/* line 34, style.less */
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* line 72, style.less */
+.slidetool {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  width: 200px;
+  height: 20px;
+  margin-left: -100px;
+  padding: 0 ;
+  z-index: 2;
+}
+/* line 84, style.less */
+.slidetool > ul {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-align: center;
+}
+/* line 93, style.less */
+.slidetool > ul li {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  margin-left: 5px;
+}
+/* line 104, style.less */
+.slidetool > ul li span {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+  border: 1.5px #ffffff solid;
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+}
+/* line 116, style.less */
+.slidetool > ul li input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+  z-index: 3;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+/* line 129, style.less */
+.slidetool > ul li input:hover {
+  cursor: pointer;
+}
+/* line 133, style.less */
+.slidetool > ul li input:checked + span {
+  background: #ffffff;
+}
+/* line 147, style.less */
+.lottery-scroll,
+.lottery-panel {
+  width: 100%;
+  position: relative;
+  height: 100%;
+  top: 0;
+  transition: all 0.5s ease-in-out 0s;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+}
+/* line 159, style.less */
+.lottery-scroll .lottery-panel {
+  background: #b45b3e;
+}
+/* line 165, style.less */
+.lottery-scroll .lottery-panel .lotterycup {
+  position: absolute;
+  left: 10%;
+  margin: 0;
+  top: 38.2%;
+  text-align: center;
+  vertical-align: middle;
+}
+/* line 178, style.less */
+.lottery-scroll .lottery-panel .lotterydata {
+  display: block;
+  width: 40%;
+  /*change*/
+  height: 80%;
+  /*change*/
+  max-width: 576px;
+  top: 10%;
+  color: #fff;
+  border-top: 1px #fff solid;
+  border-bottom: 1px #fff solid;
+  position: absolute;
+  left: 50%;
+  font-family: '微软雅黑';
+  font-size: 15px;
+  font-weight: lighter;
+  border-radius: 5px;
+}
+/* line 197, style.less */
+.lottery-scroll .lottery-panel .lotterydata .curnt_lotry_info {
+  min-height: 30%;
+  /*change*/
+  heigh: auto;
+  width: 100%;
+  /*change*/
+  position: relative;
+}
+/* line 206, style.less */
+.lottery-scroll .lottery-panel .lotterydata .curnt_lotry_info > ul li {
+  display: box;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  /*按行排列显示*/
+  flex-direction: row;
+  -o-flex-direction: row;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  margin-top: 10px;
+  text-decoration: none;
+  list-style-type: none;
+  line-height: 1.5em;
+  text-shadow: rgba(255, 255, 255, 0.2) 0 1px 1px;
+}
+/* line 222, style.less */
+.lottery-scroll .lottery-panel .lotterydata .curnt_lotry_info > ul li [class^=simpleballwrapper] {
+  margin-left: 5px;
+}
+/* line 229, style.less */
+.lottery-scroll .lottery-panel .lotterydata .mid_leng_button {
+  padding: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-style: none;
+  width: 50%;
+  /*change*/
+  height: 50px;
+  /*change*/
+  line-height: 50px;
+  color: #b45b3e;
+  font-size: 1.2em;
+  position: absolute;
+  bottom: 3%;
+  border-radius: 2px;
+  right: 5%;
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
+}
+/* line 246, style.less */
+.lottery-scroll .lottery-panel .lotterydata .mid_leng_button:hover {
+  cursor: pointer;
+  border: 1pt solid #fff ;
+  background: transparent;
+  color: #fff;
+}
+/* line 250, style.less */
+.lottery-scroll .lottery-panel .lotterydata .mid_leng_button:hover::after {
+  border-top: 1pt solid #fff;
+  border-right: 1pt solid #fff;
+  transform: translate(0, -5px) rotate(-45deg);
+  -o-transform: translate(0, -5px) rotate(-45deg);
+  -ms-transform: translate(0, -5px) rotate(-45deg);
+  -webkit-transform: translate(0, -5px) rotate(-45deg);
+  -moz-transform: translate(0, -5px) rotate(-45deg);
+}
+/* line 259, style.less */
+.lottery-scroll .lottery-panel .lotterydata .mid_leng_button:hover span {
+  transform: translate(-25px, 0);
+  -o-transform: translate(-25px, 0);
+  -ms-transform: translate(-25px, 0);
+  -webkit-transform: translate(-25px, 0);
+  -moz-transform: translate(-25px, 0);
+}
+/* line 268, style.less */
+.lottery-scroll .lottery-panel .lotterydata .mid_leng_button::after {
+  content: "";
+  width: 12.5px;
+  /*change*/
+  height: 12.5px;
+  /*change*/
+  transform: rotateZ(-45deg);
+  -o-transform: rotateZ(-45deg);
+  -moz-transform: rotateZ(-45deg);
+  -ms-transform: rotateZ(-45deg);
+  -webkit-transform: rotateZ(-45deg);
+  transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  -moz-transition: all ease-out 0.3s;
+  -webkit-transition: all ease-out 0.3s;
+  -ms-transition: all ease-out 0.3s;
+  border-top: 1pt solid #b45b3e;
+  border-right: 1pt solid #b45b3e;
+  position: absolute;
+  right: 15%;
+  top: 50%;
+}
+/* line 291, style.less */
+.lottery-scroll .lottery-panel .lotterydata .mid_leng_button:active {
+  background: #fff;
+  color: #b45b3e ;
+}
+/* line 294, style.less */
+.lottery-scroll .lottery-panel .lotterydata .mid_leng_button:active::after {
+  border-color: #b45b3e;
+}
+/* line 299, style.less */
+.lottery-scroll .lottery-panel .lotterydata .mid_leng_button span {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  font-size: 80%;
+  background: transparent;
+  max-width: 100px;
+  transition: all ease-out 0.4s;
+  -o-transition: all ease-out 0.4s;
+  -moz-transition: all ease-out 0.4s;
+  -webkit-transition: all ease-out 0.4s;
+  -ms-transition: all ease-out 0.4s;
+}
+@-webkit-keyframes btn_arrow_dh {
+  /* line 323, style.less */
+  0% {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  /* line 328, style.less */
+  100% {
+    -webkit-transform: translateY(10px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+@-moz-keyframes btn_arrow_dh {
+  /* line 335, style.less */
+  0% {
+    -moz-transform: translateY(0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  /* line 340, style.less */
+  100% {
+    -moz-transform: translateY(10px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+@-ms-keyframes btn_arrow_dh {
+  /* line 347, style.less */
+  0% {
+    -ms-transform: translateY(0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  /* line 352, style.less */
+  100% {
+    -ms-transform: translateY(10px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+@-o-keyframes btn_arrow_dh {
+  /* line 359, style.less */
+  0% {
+    -o-transform: translateY(0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  /* line 364, style.less */
+  100% {
+    -o-transform: translateY(10px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+@keyframes btn_arrow_dh {
+  /* line 371, style.less */
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+  /* line 376, style.less */
+  100% {
+    transform: translateY(10px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+}
+/* line 383, style.less */
+.lottery-scroll #ssq {
+  left: 0;
+  position: absolute;
+  background: linear-gradient(0 0, #a9563b, #b46146);
+  background: -moz-linear-gradient(0 0, #a9563b, #b46146);
+  background: -o-linear-gradient(0 0, #a9563b, #b46146);
+  background: -webkit-linear-gradient(0 0, #a9563b, #b46146);
+  background: -webkit-gradient(linear, 0 0, right bottom, from(#a9563b), to(#b46146));
+  background: -ms-linear-gradient(0 0, #a9563b, #b46146);
+}
+/* line 395, style.less */
+.lottery-scroll #dlt {
+  left: 100%;
+  position: absolute;
+}
+/* line 399, style.less */
+.lottery-scroll #qxc {
+  left: 200%;
+  position: absolute;
+}
+/*------------------------------------------------lotterydata_movex begin---------------------------------------------------------------*/
+/*
+ *彩票数据块刚进来时的动画
+ *
+ */
+/* line 6, event.less */
+.lotterydata_movex {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  animation: lottery_data_slide 0.8s ease-in-out 0.2s 1 forwards;
+  -o-animation: lottery_data_slide 0.8s ease-in-out 0.2s 1 forwards;
+  -moz-animation: lottery_data_slide 0.8s ease-in-out 0.2s 1 forwards;
+  -ms-animation: lottery_data_slide 0.8s ease-in-out 0.2s 1 forwards;
+  -webkit-animation: lottery_data_slide 0.8s ease-in-out 0.2s 1 forwards;
+}
+/* line 15, event.less */
+.lotterydata_movex .curnt_lotry_info > ul li:nth-of-type(1) {
+  animation: lottery_data_items_slide 0.8s ease-out 0.6s 1 backwards;
+  -webkit-animation: lottery_data_items_slide 0.8s ease-out 0.6s 1 backwards;
+  -ms-animation: lottery_data_items_slide 0.8s ease-out 0.6s 1 backwards;
+  -moz-animation: lottery_data_items_slide 0.8s ease-out 0.6s 1 backwards;
+  -o-animation: lottery_data_items_slide 0.8s ease-out 0.6s 1 backwards;
+}
+/* line 18, event.less */
+.lotterydata_movex .curnt_lotry_info > ul li:nth-of-type(2) {
+  animation: lottery_data_items_slide 0.8s ease-out 1s 1 backwards;
+  -webkit-animation: lottery_data_items_slide 0.8s ease-out 1s 1 backwards;
+  -ms-animation: lottery_data_items_slide 0.8s ease-out 1s 1 backwards;
+  -moz-animation: lottery_data_items_slide 0.8s ease-out 1s 1 backwards;
+  -o-animation: lottery_data_items_slide 0.8s ease-out 1s 1 backwards;
+}
+/* line 21, event.less */
+.lotterydata_movex .curnt_lotry_info > ul li:nth-of-type(3) {
+  animation: lottery_data_items_slide 0.8s ease-out 1.4s 1 backwards;
+  -webkit-animation: lottery_data_items_slide 0.8s ease-out 1.4s 1 backwards;
+  -ms-animation: lottery_data_items_slide 0.8s ease-out 1.4s 1 backwards;
+  -moz-animation: lottery_data_items_slide 0.8s ease-out 1.4s 1 backwards;
+  -o-animation: lottery_data_items_slide 0.8s ease-out 1.4s 1 backwards;
+}
+/* line 24, event.less */
+.lotterydata_movex .curnt_lotry_info > ul li:nth-of-type(4) {
+  animation: lottery_data_items_slide 0.8s ease-out 1.8s 1 backwards;
+  -webkit-animation: lottery_data_items_slide 0.8s ease-out 1.8s 1 backwards;
+  -ms-animation: lottery_data_items_slide 0.8s ease-out 1.8s 1 backwards;
+  -moz-animation: lottery_data_items_slide 0.8s ease-out 1.8s 1 backwards;
+  -o-animation: lottery_data_items_slide 0.8s ease-out 1.8s 1 backwards;
+}
+/* line 27, event.less */
+.lotterydata_movex .curnt_lotry_info > ul li:nth-of-type(5) {
+  animation: lottery_data_items_slide 0.8s ease-out 2.2s 1 backwards;
+  -webkit-animation: lottery_data_items_slide 0.8s ease-out 2.2s 1 backwards;
+  -ms-animation: lottery_data_items_slide 0.8s ease-out 2.2s 1 backwards;
+  -moz-animation: lottery_data_items_slide 0.8s ease-out 2.2s 1 backwards;
+  -o-animation: lottery_data_items_slide 0.8s ease-out 2.2s 1 backwards;
+}
+/* line 30, event.less */
+.lotterydata_movex .curnt_lotry_info > ul li:nth-of-type(6) {
+  animation: lottery_data_items_slide 0.8s ease-out 2.6s 1 backwards;
+  -webkit-animation: lottery_data_items_slide 0.8s ease-out 2.6s 1 backwards;
+  -ms-animation: lottery_data_items_slide 0.8s ease-out 2.6s 1 backwards;
+  -moz-animation: lottery_data_items_slide 0.8s ease-out 2.6s 1 backwards;
+  -o-animation: lottery_data_items_slide 0.8s ease-out 2.6s 1 backwards;
+}
+/* line 33, event.less */
+.lotterydata_movex .curnt_lotry_info > ul li:nth-of-type(7) {
+  animation: lottery_data_items_slide 0.8s ease-out 3s 1 backwards;
+  -webkit-animation: lottery_data_items_slide 0.8s ease-out 3s 1 backwards;
+  -ms-animation: lottery_data_items_slide 0.8s ease-out 3s 1 backwards;
+  -moz-animation: lottery_data_items_slide 0.8s ease-out 3s 1 backwards;
+  -o-animation: lottery_data_items_slide 0.8s ease-out 3s 1 backwards;
+}
+@-webkit-keyframes lottery_data_slide {
+  /* line 46, event.less */
+  0% {
+    opacity: 0 ;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateX(30px);
+  }
+  /* line 51, event.less */
+  100% {
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes lottery_data_slide {
+  /* line 58, event.less */
+  0% {
+    opacity: 0 ;
+    filter: alpha(opacity=0);
+    -moz-transform: translateX(30px);
+  }
+  /* line 63, event.less */
+  100% {
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+    -moz-transform: translateX(0);
+  }
+}
+@-ms-keyframes lottery_data_slide {
+  /* line 70, event.less */
+  0% {
+    opacity: 0 ;
+    filter: alpha(opacity=0);
+    -ms-transform: translateX(30px);
+  }
+  /* line 75, event.less */
+  100% {
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+    -ms-transform: translateX(0);
+  }
+}
+@-o-keyframes lottery_data_slide {
+  /* line 82, event.less */
+  0% {
+    opacity: 0 ;
+    filter: alpha(opacity=0);
+    -o-transform: translateX(30px);
+  }
+  /* line 87, event.less */
+  100% {
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+    -o-transform: translateX(0);
+  }
+}
+@keyframes lottery_data_slide {
+  /* line 94, event.less */
+  0% {
+    opacity: 0 ;
+    filter: alpha(opacity=0);
+    transform: translateX(30px);
+  }
+  /* line 99, event.less */
+  100% {
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+    transform: translateX(0);
+  }
+}
+/*------------------------------------------------lotterydata_movex end---------------------------------------------------------------*/
+/*------------------------------------------------lotterycup_movex begin---------------------------------------------------------------*/
+/*
+ * 彩票图标刚进来是的动画
+ * 双色球初始化图标透明度设置成0,看不见,动画起始透明度为0
+ */
+/* line 111, event.less */
+.lotterycup_movex {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  color: #fff;
+  animation: lotterycup_slide 0.8s ease-in-out 0.2s 1 forwards;
+  -o-animation: lotterycup_slide 0.8s ease-in-out 0.2s 1 forwards;
+  -moz-animation: lotterycup_slide 0.8s ease-in-out 0.2s 1 forwards;
+  -ms-animation: lotterycup_slide 0.8s ease-in-out 0.2s 1 forwards;
+  -webkit-animation: lotterycup_slide 0.8s ease-in-out 0.2s 1 forwards;
+}
+@-webkit-keyframes lotterycup_slide {
+  /* line 123, event.less */
+  0% {
+    /* style */
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateX(-30px);
+  }
+  /* line 129, event.less */
+  100% {
+    /* style */
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateX(0);
+  }
+}
+@-moz-keyframes lotterycup_slide {
+  /* line 137, event.less */
+  0% {
+    /* style */
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-transform: translateX(-30px);
+  }
+  /* line 144, event.less */
+  100% {
+    /* style */
+    -moz-transform: translateX(0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+@-ms-keyframes lotterycup_slide {
+  /* line 152, event.less */
+  0% {
+    /* style */
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-transform: translateX(-30px);
+  }
+  /* line 158, event.less */
+  100% {
+    /* style */
+    -ms-transform: translateX(0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+@-o-keyframes lotterycup_slide {
+  /* line 166, event.less */
+  0% {
+    /* style */
+    -o-transform: translateX(-30px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 172, event.less */
+  100% {
+    /* style */
+    -o-transform: translateX(0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+@keyframes lotterycup_slide {
+  /* line 180, event.less */
+  0% {
+    /* style */
+    transform: translateX(-30px);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 186, event.less */
+  100% {
+    /* style */
+    transform: translateX(0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+}
+/*------------------------------------------------lotterycup_movex end---------------------------------------------------------------*/
+/*页面加载以后,定义平移动画 begin*/
+/*No.1*/
+/* line 197, event.less */
+.lottery_slide_1 {
+  animation: lottery_slide_1 0.5s ease-in-out 0.1s 1 forwards;
+  -o-animation: lottery_slide_1 0.5s ease-in-out 0.1s 1 forwards;
+  -moz-animation: lottery_slide_1 0.5s ease-in-out 0.1s 1 forwards;
+  -ms-animation: lottery_slide_1 0.5s ease-in-out 0.1s 1 forwards;
+  -webkit-animation: lottery_slide_1 0.5s ease-in-out 0.1s 1 forwards;
+}
+/*No.2*/
+/* line 205, event.less */
+.lottery_slide_2 {
+  /*transform : translateX(-100%);
+	-webkit-transform : translateX(-100%);
+	-o-transform : translateX(-100%);
+	-ms-transform : translateX(-100%);
+	-moz-transform : translateX(-100%);*/
+  animation: lottery_slide_2 0.5s ease-in-out 0.1s 1 forwards;
+  -o-animation: lottery_slide_2 0.5s ease-in-out 0.1s 1 forwards;
+  -moz-animation: lottery_slide_2 0.5s ease-in-out 0.1s 1 forwards;
+  -ms-animation: lottery_slide_2 0.5s ease-in-out 0.1s 1 forwards;
+  -webkit-animation: lottery_slide_2 0.5s ease-in-out 0.1s 1 forwards;
+  left: -100%;
+}
+/*No.3*/
+/* line 219, event.less */
+.lottery_slide_3 {
+  /*transform : translateX(-100%);
+	-webkit-transform : translateX(-100%);
+	-o-transform : translateX(-100%);
+	-ms-transform : translateX(-100%);
+	-moz-transform : translateX(-100%);*/
+  animation: lottery_slide_3 0.5s ease-in-out 0.1s 1 forwards;
+  -o-animation: lottery_slide_3 0.5s ease-in-out 0.1s 1 forwards;
+  -moz-animation: lottery_slide_3 0.5s ease-in-out 0.1s 1 forwards;
+  -ms-animation: lottery_slide_3 0.5s ease-in-out 0.1s 1 forwards;
+  -webkit-animation: lottery_slide_3 0.5s ease-in-out 0.1s 1 forwards;
+}
+/*定义平移动画 end*/
+/*第一个平移*/
+@-webkit-keyframes lottery_slide_1 {
+  /* line 238, event.less */
+  100% {
+    -webkit-transform: translateX(0);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-moz-keyframes lottery_slide_1 {
+  /* line 247, event.less */
+  100% {
+    -moz-transform: translateX(0);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-ms-keyframes lottery_slide_1 {
+  /* line 256, event.less */
+  100% {
+    -ms-transform: translateX(0);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-o-keyframes lottery_slide_1 {
+  /* line 265, event.less */
+  100% {
+    -o-transform: translateX(0);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@keyframes lottery_slide_1 {
+  /* line 274, event.less */
+  100% {
+    transform: translateX(0);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+/*第二个平移*/
+@-webkit-keyframes lottery_slide_2 {
+  /* line 282, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 287, event.less */
+  100% {
+    -webkit-transform: translateX(-100%);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-moz-keyframes lottery_slide_2 {
+  /* line 294, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 299, event.less */
+  100% {
+    -moz-transform: translateX(-100%);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-ms-keyframes lottery_slide_2 {
+  /* line 306, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 311, event.less */
+  100% {
+    -ms-transform: translateX(-100%);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-o-keyframes lottery_slide_2 {
+  /* line 318, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 323, event.less */
+  100% {
+    -o-transform: translateX(-100%);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@keyframes lottery_slide_2 {
+  /* line 330, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 335, event.less */
+  100% {
+    transform: translateX(-100%);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+/*第三个平移*/
+@-webkit-keyframes lottery_slide_3 {
+  /* line 343, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 348, event.less */
+  100% {
+    -webkit-transform: translateX(-200%);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-moz-keyframes lottery_slide_3 {
+  /* line 355, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 360, event.less */
+  100% {
+    -moz-transform: translateX(-200%);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-ms-keyframes lottery_slide_3 {
+  /* line 367, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 372, event.less */
+  100% {
+    -ms-transform: translateX(-200%);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-o-keyframes lottery_slide_3 {
+  /* line 379, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 384, event.less */
+  100% {
+    -o-transform: translateX(-200%);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@keyframes lottery_slide_3 {
+  /* line 391, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 396, event.less */
+  100% {
+    transform: translateX(-200%);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+/*----------------------彩票内容滑动动画 begin--------------------------------------------------*/
+/*反弹距离*/
+/*第一条内容滑动动画*/
+@-webkit-keyframes lottery_data_items_slide {
+  /* line 406, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transform: translateX(200%);
+  }
+  /* line 411, event.less */
+  80% {
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+    -webkit-transform: translateX(-10px);
+  }
+  /* line 416, event.less */
+  100% {
+    transform: translateX(0);
+  }
+}
+@-moz-keyframes lottery_data_items_slide {
+  /* line 421, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -moz-transform: translateX(200%);
+  }
+  /* line 426, event.less */
+  80% {
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+    -moz-transform: translateX(-10px);
+  }
+  /* line 431, event.less */
+  100% {
+    transform: translateX(0);
+  }
+}
+@-ms-keyframes lottery_data_items_slide {
+  /* line 436, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-transform: translateX(200%);
+  }
+  /* line 441, event.less */
+  80% {
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+    -ms-transform: translateX(-10px);
+  }
+  /* line 446, event.less */
+  100% {
+    transform: translateX(0);
+  }
+}
+@-o-keyframes lottery_data_items_slide {
+  /* line 451, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -o-transform: translateX(200%);
+  }
+  /* line 456, event.less */
+  80% {
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+    -o-transform: translateX(-10px);
+  }
+  /* line 461, event.less */
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes lottery_data_items_slide {
+  /* line 466, event.less */
+  0% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translateX(200%);
+  }
+  /* line 471, event.less */
+  80% {
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+    transform: translateX(-10px);
+  }
+  /* line 476, event.less */
+  100% {
+    transform: translateX(0);
+  }
+}
+/*----------------------彩票内容滑动动画 end----------------------------------------------------*/
+/* line 408, style.less */
+.panel-init-slide {
+  animation: lottery_init_slide 0.5s ease-in-out 0.1s 1 forwards;
+  -o-animation: lottery_init_slide 0.5s ease-in-out 0.1s 1 forwards;
+  -moz-animation: lottery_init_slide 0.5s ease-in-out 0.1s 1 forwards;
+  -ms-animation: lottery_init_slide 0.5s ease-in-out 0.1s 1 forwards;
+  -webkit-animation: lottery_init_slide 0.5s ease-in-out 0.1s 1 forwards;
+}
+@-webkit-keyframes lottery_init_slide {
+  /* line 417, style.less */
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 422, style.less */
+  100% {
+    transform: translateX(0);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-moz-keyframes lottery_init_slide {
+  /* line 429, style.less */
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 434, style.less */
+  100% {
+    transform: translateX(0);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-ms-keyframes lottery_init_slide {
+  /* line 441, style.less */
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 446, style.less */
+  100% {
+    transform: translateX(0);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@-o-keyframes lottery_init_slide {
+  /* line 453, style.less */
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 458, style.less */
+  100% {
+    transform: translateX(0);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+@keyframes lottery_init_slide {
+  /* line 465, style.less */
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  /* line 470, style.less */
+  100% {
+    transform: translateX(0);
+    opacity: 1 ;
+    filter: alpha(opacity=100);
+  }
+}
+/*computer*/
+@media only screen and (min-width: 1024px) {
+  /* line 480, style.less */
+  .lottery-scroll .lottery-panel {
+    /*280px*/
+  }
+  /* line 483, style.less */
+  .lottery-scroll .lottery-panel .lotterycup {
+    width: 300px;
+    /*change*/
+    height: 300px;
+    /*change*/
+    line-height: 300px;
+    margin-top: -150px;
+    left: 50%;
+    margin-left: -450px;
+  }
+  /* line 494, style.less */
+  .lottery-scroll .lottery-panel .lotterydata {
+    width: 40%;
+    /*change*/
+    height: 80%;
+    /*change*/
+    right: 10%;
+  }
+}
+@media only screen and (min-width: 384px) and (max-width: 1024px) {
+  /* line 505, style.less */
+  .lottery-scroll .lottery-panel {
+    /*280px*/
+  }
+  /* line 508, style.less */
+  .lottery-scroll .lottery-panel .lotterycup {
+    width: 40%;
+    /*change*/
+    height: 30%;
+    /*change*/
+    margin-top: -100px;
+  }
+  /* line 516, style.less */
+  .lottery-scroll .lottery-panel .lotterydata {
+    width: 40%;
+    /*change*/
+    height: 80%;
+    /*change*/
+    right: 10%;
+  }
+  /* line 521, style.less */
+  .lottery-scroll .lottery-panel .lotterydata .curnt_lotry_info .mid_leng_button {
+    bottom: 5% ;
+    font-size: 100%;
+  }
+}
+/*i pad mini width*/
+@media screen and (max-width: 576px) {
+  /* line 534, style.less */
+  .lottery-scroll .lottery-panel .lotterycup {
+    left: 5%;
+    display: none;
+  }
+  /* line 542, style.less */
+  .lottery-scroll .lottery-panel .lotterydata {
+    width: 100%;
+    /*change*/
+    height: 100%;
+    /*change*/
+    right: 0;
+    left: 0;
+    top: 0;
+  }
+  /* line 548, style.less */
+  .lottery-scroll .lottery-panel .lotterydata .curnt_lotry_info {
+    height: 100%;
+  }
+  /* line 550, style.less */
+  .lottery-scroll .lottery-panel .lotterydata .curnt_lotry_info .mid_leng_button {
+    bottom: 5% ;
+  }
+}
+/*引入彩票数据包装样式*/
+/*彩票球大小*/
+/*彩票球包装样式-简*/
+/* line 21, lotterywrapper.less */
+.simpleballwrapper_red {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 16px;
+  color: rgba(255, 0, 0, 0.6);
+  text-align: center;
+  background: linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -moz-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -ms-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -webkit-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -webkit-gradient(linear, 30% 0, 70% 100%, color-stop(60%, #ffffff), color-stop(100%, rgba(100, 100, 100, 0.5)));
+}
+/* line 24, lotterywrapper.less */
+.simpleballwrapper_blue {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 16px;
+  color: rgba(0, 0, 255, 0.6);
+  text-align: center;
+  background: linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -moz-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -ms-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -webkit-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -webkit-gradient(linear, 30% 0, 70% 100%, color-stop(60%, #ffffff), color-stop(100%, rgba(100, 100, 100, 0.5)));
+}
+/* line 27, lotterywrapper.less */
+.nextnumsection {
+  display: box;
+  display: flex;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-direction: column ;
+  -webkit-flex-direction: column ;
+  -ms-flex-direction: column ;
+  -o-flex-direction: column ;
+  -moz-flex-direction: column ;
+  align-content: center;
+  /*基于基线对齐*/
+  align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -webkit-align-items: baseline;
+  -o-align-items: baseline;
+  min-height: 30%;
+  height: auto;
+  max-height: 80%;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -o-justify-content: flex-start;
+  padding-top: 1%;
+  padding-bottom: 3%;
+}
+/* line 63, lotterywrapper.less */
+.nextnumsection h1 {
+  font-weight: lighter;
+  font-family: serif;
+}
+/* line 67, lotterywrapper.less */
+.nextnumsection dl {
+  margin: 0 ;
+  padding: 0;
+}
+/* line 70, lotterywrapper.less */
+.nextnumsection dl > dt {
+  margin-left: 5px;
+}
+/* line 73, lotterywrapper.less */
+.nextnumsection dl > dd {
+  margin-left: 0;
+}
+/* line 77, lotterywrapper.less */
+.nextnumsection .lotterynums {
+  display: flex;
+  display: box;
+  display: flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  margin: 0;
+  margin-left: 30px;
+  margin-top: 10px;
+  padding: 0;
+  /* perspective : */
+  /*border : 1px solid;*/
+}
+/* line 94, lotterywrapper.less */
+.nextnumsection .lotterynums li {
+  display: block;
+  white-space: wrap;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  with: auto ;
+  height: auto;
+  margin-left: 5px;
+  perspective: 100px;
+  -o-perspective: 100px;
+  -moz-perspective: 100px;
+  -ms-perspective: 100px;
+}
+/* line 108, lotterywrapper.less */
+.nextnumsection .lotterynums li span:first-of-type {
+  /*滚入动画触发*/
+  animation: ballrollingin 2s ease-out 0.7s 1;
+  -o-animation: ballrollingin 2s ease-out 0.7s 1;
+  -moz-animation: ballrollingin 2s ease-out 0.7s 1;
+  -ms-animation: ballrollingin 2s ease-out 0.7s 1;
+  -webkit-animation: ballrollingin 2s ease-out 0.7s 1;
+}
+/* line 109, lotterywrapper.less */
+.nextnumsection .lotterynums li span:first-of-type.simpleballwrapper {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 16px;
+  color: rgba(255, 0, 0, 0.6);
+  text-align: center;
+  background: linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -moz-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -ms-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -webkit-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -webkit-gradient(linear, 30% 0, 70% 100%, color-stop(60%, #ffffff), color-stop(100%, rgba(100, 100, 100, 0.5)));
+}
+/* line 112, lotterywrapper.less */
+.nextnumsection .lotterynums li span:first-of-type.simpleballwrapper_blue {
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 16px;
+  color: rgba(0, 0, 255, 0.6);
+  text-align: center;
+  background: linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -moz-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -ms-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -webkit-linear-gradient(30% 0, #ffffff 60%, rgba(100, 100, 100, 0.5));
+  background: -webkit-gradient(linear, 30% 0, 70% 100%, color-stop(60%, #ffffff), color-stop(100%, rgba(100, 100, 100, 0.5)));
+}
+/* line 123, lotterywrapper.less */
+.nextnumsection .lotterynums li span:nth-of-type(2) {
+  /*充当阴影*/
+  height: 7.5px;
+  width: 7.5px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  top: -5px;
+  z-index: -1;
+  display: block;
+  animation: ballshadowfollow 2s ease-out 0.7s 1;
+  -o-animation: ballshadowfollow 2s ease-out 0.7s 1;
+  -moz-animation: ballshadowfollow 2s ease-out 0.7s 1;
+  -ms-animation: ballshadowfollow 2s ease-out 0.7s 1;
+  -webkit-animation: ballshadowfollow 2s ease-out 0.7s 1;
+  border-radius: 6px;
+  margin-left: 11.25px;
+  box-shadow: #ffffff 0px 0px 10px;
+}
+@-webkit-keyframes ballrollingin {
+  /* line 145, lotterywrapper.less */
+  0% {
+    -webkit-transform: translateX(500px) rotateZ(0deg);
+  }
+  /* line 148, lotterywrapper.less */
+  100% {
+    -webkit-transform: translateX(0) rotateZ(-720deg);
+    /* style */
+  }
+}
+@-moz-keyframes ballrollingin {
+  /* line 154, lotterywrapper.less */
+  0% {
+    -moz-transform: translateX(500px) rotateZ(0deg);
+  }
+  /* line 157, lotterywrapper.less */
+  100% {
+    -moz-transform: translateX(0) rotateZ(-720deg);
+  }
+}
+@-ms-keyframes ballrollingin {
+  /* line 162, lotterywrapper.less */
+  0% {
+    -ms-transform: translateX(500px) rotateZ(0deg);
+  }
+  /* line 165, lotterywrapper.less */
+  100% {
+    -ms-transform: translateX(0) rotateZ(-720deg);
+  }
+}
+@-o-keyframes ballrollingin {
+  /* line 170, lotterywrapper.less */
+  0% {
+    -o-transform: translateX(500px) rotateZ(0deg);
+  }
+  /* line 173, lotterywrapper.less */
+  100% {
+    -o-transform: translateX(0) rotateZ(-720deg);
+  }
+}
+@keyframes ballrollingin {
+  /* line 178, lotterywrapper.less */
+  0% {
+    transform: translateX(500px) rotateZ(0deg);
+  }
+  /* line 181, lotterywrapper.less */
+  100% {
+    transform: translateX(0) rotateZ(-720deg);
+  }
+}
+/*彩票球阴影跟随动画*/
+@-webkit-keyframes ballshadowfollow {
+  /* line 187, lotterywrapper.less */
+  0% {
+    transform: translateX(500px);
+  }
+  /* line 190, lotterywrapper.less */
+  100% {
+    /* style */
+    webkit-tranform: translateX(0);
+  }
+}
+@-moz-keyframes ballshadowfollow {
+  /* line 196, lotterywrapper.less */
+  0% {
+    transform: translateX(500px);
+  }
+  /* line 199, lotterywrapper.less */
+  100% {
+    /* style */
+    moz-tranform: translateX(0);
+  }
+}
+@-ms-keyframes ballshadowfollow {
+  /* line 205, lotterywrapper.less */
+  0% {
+    transform: translateX(500px);
+  }
+  /* line 208, lotterywrapper.less */
+  100% {
+    /* style */
+    ms-tranform: translateX(0);
+  }
+}
+@-o-keyframes ballshadowfollow {
+  /* line 214, lotterywrapper.less */
+  0% {
+    transform: translateX(500px);
+  }
+  /* line 217, lotterywrapper.less */
+  100% {
+    /* style */
+    o-tranform: translateX(0);
+  }
+}
+@keyframes ballshadowfollow {
+  /* line 223, lotterywrapper.less */
+  0% {
+    transform: translateX(500px);
+  }
+  /* line 226, lotterywrapper.less */
+  100% {
+    /* style */
+    tranform: translateX(0);
+  }
+}
