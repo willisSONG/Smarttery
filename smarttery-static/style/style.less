@@ -6,7 +6,7 @@
 body,html{
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	overflow-x: hidden;
 	min-width : 100%;
 	height : 100%;
 	font : Arial 25px/30px;
@@ -30,6 +30,26 @@ input,textarea,p,span,button {
 	font-family: inherit;
 	color: inherit;
 	background-color: inherit;
+}
+.boxmodel(@model:1){
+	/*旧写法*/
+	display : box;
+	display : -webkit-box;
+	display : -moz-box;
+	display : -ms-box;
+	display : -o-box;
+	/*新写法*/
+	display : flex;
+	display : -webkit-flex;
+	display : -moz-flex;
+	display : -ms-flex;
+	display : -o-flex;
+	/*混合写法*/
+	display : -ms-flexbox;
+	display : -webkit-flexbox;
+	display : -moz-flexbox;
+	display : -o-flexbox;
+	display : flexbox;
 }
 .container{
 	height: 100%;
@@ -204,10 +224,7 @@ input,textarea,p,span,button {
 					// margin-top : 20%;
 					// margin-left : -15%;
 					li{
-						display : box;
-						display : flex;
-						display : -webkit-flex;
-						display : -ms-flexbox;
+						 .boxmodel();
 						/*按行排列显示*/
 						flex-direction : row;
 						-o-flex-direction : row;
@@ -545,12 +562,10 @@ input,textarea,p,span,button {
 				right : 0;
 				left : 0;
 				top : 0;
-				.curnt_lotry_info{
-					height : 100%;
-					.mid_leng_button{
-						bottom : 5% ;
-					}
-				}
+				min-height : 30%;/*change*/
+				heigh : auto;
+				width : 100%;/*change*/
+				position : relative;
 			}
 		}
 	}

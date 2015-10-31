@@ -24,11 +24,29 @@
 .simpleballwrapper_blue{
 	.simpleballwrapper(rgba(0,0,255,.6));
 }
-.nextnumsection{
+.boxmodel(@model:1){
+	/*旧写法*/
 	display : box;
+	display : -webkit-box;
+	display : -moz-box;
+	display : -ms-box;
+	display : -o-box;
+	/*新写法*/
 	display : flex;
 	display : -webkit-flex;
+	display : -moz-flex;
+	display : -ms-flex;
+	display : -o-flex;
+	/*混合写法*/
 	display : -ms-flexbox;
+	display : -webkit-flexbox;
+	display : -moz-flexbox;
+	display : -o-flexbox;
+	display : flexbox;
+}
+.nextnumsection{
+	// .boxmodel;//在style中
+	// .boxmodel();
 	// border : 1pt solid rgba(255,255,255,.7);
 	border-top : 1px solid rgba(255,255,255,.7);
 	border-bottom : 1px solid rgba(255,255,255,.7);
@@ -38,18 +56,22 @@
 	-moz-flex-wrap : wrap;
 	-o-flex-wrap : wrap;
 	-ms-flex-wrap : wrap;
+
 	flex-direction : column ;
 	-webkit-flex-direction : column ;
 	-ms-flex-direction : column ;
 	-o-flex-direction : column ;
 	-moz-flex-direction : column ;
+
 	align-content : center;
+
 	/*基于基线对齐*/
 	align-items : baseline;
 	-moz-align-items : baseline;
 	-ms-align-items : baseline;
 	-webkit-align-items : baseline;
 	-o-align-items : baseline;
+
 	min-height : 30%;
 	height : auto;
 	max-height : 80%;
@@ -63,10 +85,15 @@
 	h1{
 		font-weight : lighter;
 		font-family: serif;
+		clean :both;
+		// display: block;
 	}
 	dl{
 		margin : 0 ;
 		padding : 0;
+		// display: block;
+		clear : both;
+		// width : 100%;
 		>dt{
 			margin-left : 5px;
 		}
@@ -75,20 +102,32 @@
 		}
 	}
 	.lotterynums{
-		display: flex;
-		display: box;
-		display: flexbox;
-		display: -ms-flexbox;
-		display: -webkit-flex;
+		.boxmodel();
 		flex-wrap : wrap;
 		-o-flex-wrap : wrap;
 		-webkit-flex-wrap : wrap;
 		-ms-flex-wrap : wrap;
 		-moz-flex-wrap : wrap;
+		box-wrap : wrap;
+		-webkit-box-wrap : wrap;
+		-moz-box-wrap : wrap;
+		-ms-box-wrap : wrap;
+		-o-box-wrap : wrap;
+
+		flex-flow : wrap;
+		-webkit-flex-flow : wrap;
+		-moz-flex-flow : wrap;
+		-ms-flex-flow : wrap;
+		-o-flex-flow : wrap;
+
+		flex-flow : wrap;
+		flex-flow : wrap;
+		flex-flow : wrap;
 		margin : 0;
 		margin-left :30px;
 		margin-top: 10px;
 		padding: 0;
+		width : 100%;
 		/* perspective : */
 		/*border : 1px solid;*/
 		li{
