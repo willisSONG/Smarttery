@@ -11,8 +11,10 @@ body,html{
 	height : 100%;
 	font : Arial 25px/30px;
 	// width :auto;
-	// -webkit-font-smoothing:none | antialiased | subpixel-antialiased
+	// -webkit-font-smoothing:none(对低像素文本比较好) | antialiased(抗锯齿好) | subpixel-antialiased(默认值)
 	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing : grayscale;
+	text-rendering : optimizeLegibility;
 	perspective : 100; 
 	-o-perspective : 100;
 	-moz-perspective : 100;
@@ -182,7 +184,8 @@ input,textarea,p,span,button {
 			max-width : 576px;
 			top : 10%;
 			color : #fff;
-			border : 1px #fff solid;
+			border-top : 1px #fff solid;
+			border-bottom : 1px #fff solid;
 			position: absolute;
 			left : 50%;
 			font-family: '微软雅黑';
@@ -193,111 +196,128 @@ input,textarea,p,span,button {
 
 			.curnt_lotry_info{
 				// border: 1px solid;
-				height : 80%;/*change*/
+				min-height : 30%;/*change*/
+				heigh : auto;
 				width : 100%;/*change*/
-				position : absolute;
+				position : relative;
 				>ul{
-					margin-top : 20%;
+					// margin-top : 20%;
 					// margin-left : -15%;
 					li{
-						margin-top : 15px;
+						display : box;
+						display : flex;
+						display : -webkit-flex;
+						display : -ms-flexbox;
+						/*按行排列显示*/
+						flex-direction : row;
+						-o-flex-direction : row;
+						-webkit-flex-direction : row;
+						-ms-flex-direction : row;
+						-moz-flex-direction : row;
+						margin-top : 10px;
 						text-decoration: none;
 						list-style-type: none;
 						line-height: 1.5em;
 						text-shadow : rgba(255,255,255,.2) 0 1px 1px;
+						[class^=simpleballwrapper]{
+							margin-left : 5px;
+						}
 					}
 				}
-				.mid_leng_button{
-					// margin-top:80%;
-					@btn_height : 50px;
-					padding : 0;
-					bottom : 0;
-					background-color: rgba(255,255,255,1);
-					border-style: none;
-					width : 50%;/*change*/
-					height : @btn_height;/*change*/
-					line-height : @btn_height;
-					color : #b45b3e;
-					// margin-right : 30%;
-					font-size : 1.2em;
-					position: absolute;
-					border-radius : 2px;
-					right : 5%;
-					&:hover{
-						cursor:pointer;
-						border: 1pt solid #fff ;
-						background: transparent;
-						&::after{
-							border-top:1pt solid #fff;
-							border-right : 1pt solid #fff;
-							transform : translate(0,-5px) rotate(-45deg);
-							-o-transform : translate(0,-5px) rotate(-45deg);
-							-ms-transform : translate(0,-5px) rotate(-45deg);
-							-webkit-transform : translate(0,-5px) rotate(-45deg);
-							-moz-transform : translate(0,-5px) rotate(-45deg);
-						}
-						span{
-							transform : translate(-25px,0);
-							-o-transform : translate(-25px,0);
-							-ms-transform : translate(-25px,0);
-							-webkit-transform : translate(-25px,0);
-							-moz-transform : translate(-25px,0);
-						}
-						color : #fff;
-					}
+				
+			}
+			.mid_leng_button{
+				// margin-top:80%;
+				@btn_height : 50px;
+				padding : 0;
+				bottom : 0;
+				background-color: rgba(255,255,255,1);
+				border-style: none;
+				width : 50%;/*change*/
+				height : @btn_height;/*change*/
+				line-height : @btn_height;
+				color : #b45b3e;
+				// margin-right : 30%;
+				font-size : 1.2em;
+				position: absolute;
+				bottom : 3%;
+				border-radius : 2px;
+				right : 5%;
+				&:hover{
+					cursor:pointer;
+					border: 1pt solid #fff ;
+					background: transparent;
 					&::after{
-						content : "";
-						width : @btn_height/4 ;/*change*/
-						height : @btn_height/4 ;/*change*/
-						transform : rotateZ(-45deg);
-						-o-transform : rotateZ(-45deg);
-						-moz-transform : rotateZ(-45deg);
-						-ms-transform : rotateZ(-45deg);
-						-webkit-transform : rotateZ(-45deg);
-						transition : all ease-out 0.3s ;
-						-o-transition : all ease-out 0.3s ;
-						-moz-transition : all ease-out 0.3s ;
-						-webkit-transition : all ease-out 0.3s ;
-						-ms-transition : all ease-out 0.3s ;
-						// transform-origin : 0 50%;
-						border-top:1pt solid #b45b3e;
-						border-right : 1pt solid #b45b3e;
-						position: absolute;
-						right : 15%;
-						top :50%;
-						// margin-top : -@btn_height/3*sin(45deg)/2;
-						
+						border-top:1pt solid #fff;
+						border-right : 1pt solid #fff;
+						transform : translate(0,-5px) rotate(-45deg);
+						-o-transform : translate(0,-5px) rotate(-45deg);
+						-ms-transform : translate(0,-5px) rotate(-45deg);
+						-webkit-transform : translate(0,-5px) rotate(-45deg);
+						-moz-transform : translate(0,-5px) rotate(-45deg);
 					}
-					&:active{
-						background: #fff;
-						color : #b45b3e ;
-						&::after{
-							border-color: #b45b3e;
-						}
-					}
-					//button里有个span,显示按钮文字
 					span{
-						display: inline-block;
-						width : auto;
-						height :100%;
-						font-size : 80%;
-						// margin-left : 0;
-						// position: absolute;
-						// left: 0;
-						// bottom : 0;
-						// border : 1px solid  ;
-						background: transparent;
-						max-width: 100px;
-						transition : all ease-out 0.4s ;
-						-o-transition : all ease-out 0.4s ;
-						-moz-transition : all ease-out 0.4s ;
-						-webkit-transition : all ease-out 0.4s ;
-						-ms-transition : all ease-out 0.4s ;
+						transform : translate(-25px,0);
+						-o-transform : translate(-25px,0);
+						-ms-transform : translate(-25px,0);
+						-webkit-transform : translate(-25px,0);
+						-moz-transform : translate(-25px,0);
 					}
-					box-shadow : 0 1px 2px rgba(255,255,255,.3);
+					color : #fff;
 				}
+				&::after{
+					content : "";
+					width : @btn_height/4 ;/*change*/
+					height : @btn_height/4 ;/*change*/
+					transform : rotateZ(-45deg);
+					-o-transform : rotateZ(-45deg);
+					-moz-transform : rotateZ(-45deg);
+					-ms-transform : rotateZ(-45deg);
+					-webkit-transform : rotateZ(-45deg);
+					transition : all ease-out 0.3s ;
+					-o-transition : all ease-out 0.3s ;
+					-moz-transition : all ease-out 0.3s ;
+					-webkit-transition : all ease-out 0.3s ;
+					-ms-transition : all ease-out 0.3s ;
+					// transform-origin : 0 50%;
+					border-top:1pt solid #b45b3e;
+					border-right : 1pt solid #b45b3e;
+					position: absolute;
+					right : 15%;
+					top :50%;
+					// margin-top : -@btn_height/3*sin(45deg)/2;
+					
+				}
+				&:active{
+					background: #fff;
+					color : #b45b3e ;
+					&::after{
+						border-color: #b45b3e;
+					}
+				}
+				//button里有个span,显示按钮文字
+				span{
+					display: inline-block;
+					width : auto;
+					height :100%;
+					font-size : 80%;
+					// margin-left : 0;
+					// position: absolute;
+					// left: 0;
+					// bottom : 0;
+					// border : 1px solid  ;
+					background: transparent;
+					max-width: 100px;
+					transition : all ease-out 0.4s ;
+					-o-transition : all ease-out 0.4s ;
+					-moz-transition : all ease-out 0.4s ;
+					-webkit-transition : all ease-out 0.4s ;
+					-ms-transition : all ease-out 0.4s ;
+				}
+				box-shadow : 0 1px 2px rgba(255,255,255,.3);
 			}
 		}
+
 	}
 	@-webkit-keyframes btn_arrow_dh {
 		0% {

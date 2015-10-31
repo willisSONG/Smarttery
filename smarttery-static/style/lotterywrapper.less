@@ -1,9 +1,38 @@
+/*彩票球大小*/
+@ballWidth : 30px;
+@ballHeight : 30px;
+/*彩票球包装样式-简*/
+.simpleballwrapper(@color:rgba(255,0,0,.6)){
+	display : block;
+	margin: 0;
+	padding: 0;
+	width : @ballWidth;
+	height : @ballHeight;
+	line-height:@ballHeight;
+	border-radius : @ballHeight/2+1px ;
+	color : @color;
+	text-align : center;
+	background : linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.5));
+	background : -moz-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.5));
+	background : -ms-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.5));
+	background : -webkit-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.5));
+	background : -webkit-gradient(linear,30% 0,70% 100%,color-stop(60%,rgba(255,255,255,1)),color-stop(100%,rgba(100,100,100,.5)));
+}
+.simpleballwrapper_red{
+	.simpleballwrapper();
+}
+.simpleballwrapper_blue{
+	.simpleballwrapper(rgba(0,0,255,.6));
+}
 .nextnumsection{
 	display : box;
 	display : flex;
 	display : -webkit-flex;
 	display : -ms-flexbox;
-	border : 1px solid #fff;
+	// border : 1pt solid rgba(255,255,255,.7);
+	border-top : 1px solid rgba(255,255,255,.7);
+	border-bottom : 1px solid rgba(255,255,255,.7);
+	// border-bottom : 1px solid linear-gradient(0 0,rgba(255,255,255,.7),transparent);
 	flex-wrap : wrap;
 	-webkit-flex-wrap : wrap;
 	-moz-flex-wrap : wrap;
@@ -21,37 +50,181 @@
 	-ms-align-items : baseline;
 	-webkit-align-items : baseline;
 	-o-align-items : baseline;
-	height : 50%;
-	justify-content : center;
-	-webkit-justify-content : center;
-	-ms-justify-content : center;
-	-moz-justify-content : center;
-	-o-justify-content : center;
+	min-height : 30%;
+	height : auto;
+	max-height : 80%;
+	justify-content : flex-start;
+	-webkit-justify-content : flex-start;
+	-ms-justify-content : flex-start;
+	-moz-justify-content : flex-start;
+	-o-justify-content : flex-start;
+	padding-top : 1%;
+	padding-bottom : 3%;
+	h1{
+		font-weight : lighter;
+		font-family: serif;
+	}
+	dl{
+		margin : 0 ;
+		padding : 0;
+		>dt{
+			margin-left : 5px;
+		}
+		>dd{
+			margin-left : 0;
+		}
+	}
 	.lotterynums{
 		display: flex;
+		display: box;
+		display: flexbox;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		flex-wrap : wrap;
+		-o-flex-wrap : wrap;
+		-webkit-flex-wrap : wrap;
+		-ms-flex-wrap : wrap;
+		-moz-flex-wrap : wrap;
+		margin : 0;
+		margin-left :30px;
 		margin-top: 10px;
 		padding: 0;
-
-		// border : 1px solid;
+		/* perspective : */
+		/*border : 1px solid;*/
 		li{
 			display : block;
+			white-space: wrap;
 			margin: 0;
 			padding: 0;
 			list-style-type : none;
-			width : 30px;
-			height : 30px;
-			line-height:30px;
-			border-radius : 16px ;
-			border : 1px solid rgba(255,255,255,.7);
-			color : #b45b3e;
-			text-align : center;
-			background : linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.3));
-			background : -moz-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.3));
-			background : -ms-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.3));
-			background : -webkit-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.3));
-			background : -webkit-gradient(linear,30% 0,from(rgba(255,255,255,1)) 60%,color-stop(rgba(100,100,100,.5)));
+			with : auto ;
+			height : auto;
 			margin-left : 5px;
-			 // list-style : none;
+			perspective : 100px;
+			-o-perspective : 100px;
+			-moz-perspective : 100px;
+			-ms-perspective : 100px;
+			span{
+				&:first-of-type{
+					&.simpleballwrapper{
+						.simpleballwrapper_red;
+					};
+					&.simpleballwrapper_blue{
+						.simpleballwrapper_blue;
+					}
+					// border : 1px solid rgba(255,255,255,.7);
+					/*滚入动画触发*/
+					animation : ballrollingin 2s ease-out .7s 1;
+					-o-animation : ballrollingin 2s ease-out .7s 1;
+					-moz-animation : ballrollingin 2s ease-out .7s 1;
+					-ms-animation : ballrollingin 2s ease-out .7s 1;
+					-webkit-animation : ballrollingin 2s ease-out .7s 1;
+				}
+				&:nth-of-type(2){/*充当阴影*/
+					height : @ballHeight/4;
+					width : @ballWidth/4;
+					background : rgba(255,255,255,.2);
+					position: relative;
+					top : -5px;
+					z-index: -1;
+					display : block;
+					animation : ballshadowfollow 2s ease-out .7s 1;
+					-o-animation : ballshadowfollow 2s ease-out .7s 1;
+					-moz-animation : ballshadowfollow 2s ease-out .7s 1;
+					-ms-animation : ballshadowfollow 2s ease-out .7s 1;
+					-webkit-animation : ballshadowfollow 2s ease-out .7s 1;
+					border-radius : @ballWidth/6+1px;
+					margin-left : @ballWidth/2-@ballWidth/8;
+					box-shadow : rgba(255,255,255,1) 0px 0px 10px;//阴影效果
+				}
+			}
 		}
+	}
+}
+@-webkit-keyframes ballrollingin {
+	0% {
+		-webkit-transform : translateX(500px) rotateZ(0deg);
+	}
+	100% {
+		-webkit-transform : translateX(0) rotateZ(-720deg);
+		/* style */
+	}
+}
+@-moz-keyframes ballrollingin {
+	0% {
+		-moz-transform : translateX(500px) rotateZ(0deg);
+	}
+	100% {
+		-moz-transform : translateX(0) rotateZ(-720deg);
+	}
+}
+@-ms-keyframes ballrollingin {
+	0% {
+		-ms-transform : translateX(500px) rotateZ(0deg);
+	}
+	100% {
+		-ms-transform : translateX(0) rotateZ(-720deg);
+	}
+}
+@-o-keyframes ballrollingin {
+	0% {
+		-o-transform : translateX(500px) rotateZ(0deg);
+	}
+	100% {
+		-o-transform : translateX(0) rotateZ(-720deg);
+	}
+}
+@keyframes ballrollingin {
+	0% {
+		transform : translateX(500px) rotateZ(0deg);
+	}
+	100% {
+		transform: translateX(0) rotateZ(-720deg);
+	}
+}
+/*彩票球阴影跟随动画*/
+@-webkit-keyframes ballshadowfollow {
+	0% {
+		transform :translateX(500px);
+	}
+	100% {
+		/* style */
+		webkit-tranform : translateX(0);
+	}
+}
+@-moz-keyframes ballshadowfollow {
+	0% {
+		transform :translateX(500px);
+	}
+	100% {
+		/* style */
+		moz-tranform : translateX(0);
+	}
+}
+@-ms-keyframes ballshadowfollow {
+	0% {
+		transform :translateX(500px);
+	}
+	100% {
+		/* style */
+		ms-tranform : translateX(0);
+	}
+}
+@-o-keyframes ballshadowfollow {
+	0% {
+		transform :translateX(500px);
+	}
+	100% {
+		/* style */
+		o-tranform : translateX(0);
+	}
+}
+@keyframes ballshadowfollow {
+	0% {
+		transform :translateX(500px);
+	}
+	100% {
+		/* style */
+		tranform : translateX(0);
 	}
 }
