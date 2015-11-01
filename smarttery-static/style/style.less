@@ -201,7 +201,7 @@ input,textarea,p,span,button {
 			width : 40%;/*change*/
 			// min-height:600px;/*change*/
 			height : 80%;/*change*/
-			max-width : 576px;
+			max-width : 100%;
 			top : 10%;
 			color : #fff;
 			border-top : 1px #fff solid;
@@ -220,6 +220,7 @@ input,textarea,p,span,button {
 				heigh : auto;
 				width : 100%;/*change*/
 				position : relative;
+				// display : none;
 				>ul{
 					// margin-top : 20%;
 					// margin-left : -15%;
@@ -238,6 +239,9 @@ input,textarea,p,span,button {
 						text-shadow : rgba(255,255,255,.2) 0 1px 1px;
 						[class^=simpleballwrapper]{
 							margin-left : 5px;
+							+.ballshadow{
+								left: 10px !important;
+							}
 						}
 					}
 				}
@@ -517,7 +521,8 @@ input,textarea,p,span,button {
 		}
 	}
 }
-@media only screen and(min-width : 384px) and(max-width : 1024px){
+/*ipad 横屏*/
+@media only screen and(min-width : 384px) and(max-width : 1024px) and(orientation:landscape){
 	.lottery-scroll{//scrollwidth还是挺长的
 		.lottery-panel{
 			@lotterycup_width : 200px;/*280px*/
@@ -526,34 +531,31 @@ input,textarea,p,span,button {
 				width : 40%;/*change*/
 				height : 30%;/*change*/
 				margin-top : -@lotterycup_height/2;
-				// left :50%;
-				// margin-left : -@lotterycup_width;
 		 	}
 		 	//彩票数据展示区
 		 	.lotterydata{
 				width : 40%;/*change*/
-				height : 80%;/*change*/
+				height : 100%;/*change*/
 				right : 10%;
+				top : 0;
 				.curnt_lotry_info{
-					.mid_leng_button{
-						bottom : 5% ;
-						font-size: 100%;
-					}
+				}
+				.mid_leng_button{
+					bottom : 1% ;
+					font-size: 100%;
 				}
 			}
 		}
 	}
 }
-/*i pad mini width*/
-@media screen and(max-width : 576px){//384px
+/*i pad mini 或手机 竖屏 (portrait)
+*/
+@media screen and(max-width : 768px) and (orientation:portrait){
 	.lottery-scroll{//scrollwidth还是挺长的
 		.lottery-panel{
 			.lotterycup{
-				// width : @lotterycup_width;/*change*/
-				// height : @lotterycup_height;/*change*/
 				left : 5%;
 				display : none;
-				// display: none;
 		 	}
 		 	//彩票数据展示区
 		 	.lotterydata{
@@ -569,7 +571,30 @@ input,textarea,p,span,button {
 			}
 		}
 	}
-
+}
+/*手机 横屏 (portrait)
+*/
+@media screen and(max-width : 768px) and (orientation:landscape){
+	.lottery-scroll{//scrollwidth还是挺长的
+		.lottery-panel{
+			.lotterycup{
+				left : 5%;
+				display : none;
+		 	}
+		 	//彩票数据展示区
+		 	.lotterydata{
+				width : 100%;/*change*/
+				height : 100%;/*change*/
+				right : 0;
+				left : 0;
+				top : 0;
+				min-height : 30%;/*change*/
+				heigh : auto;
+				width : 100%;/*change*/
+				position : relative;
+			}
+		}
+	}
 }
 /*引入彩票数据包装样式*/
 @import 'lotterywrapper.less';

@@ -85,52 +85,81 @@ require(["jquery"],function($){
 		// alert(this)
 	}
 	//触摸事件
+	var flag = false;
 	document.getElementsByClassName("lottery-scroll")[0].addEventListener("touchstart",function(event){
-		var x = event.touches[0].clientX;
-		var y = event.touches[0].clientY;
-		initSlideParams(x,y);//设置起始坐标
+		//alert(event.touches.length);
+		flag = false;
+		var length  = event.touches.length ;
+		if(length ==1 ){
+			var x = event.touches[0].clientX;
+			var y = event.touches[0].clientY;
+			initSlideParams(x,y);//设置起始坐标
+		}
 		// console.log("x=" + x + "\ny=" +y)
 		console.log(slideParams);
 		// alert(event.touches[0]);
 	},false);
 	document.getElementsByClassName("lottery-scroll")[0].addEventListener("touchmove",function(event){
 		// alert("touchmove");
+		var length = event.touches.length;//找出有几根手指在滑动
+		if(length != 1)
+			flag = false ;
+		else
+			flag = true;
+		// alert(flag);
 	},false);
 	document.getElementsByClassName("lottery-scroll")[0].addEventListener("touchend",function(event){
 		// alert("touchmove");
-		console.log(event.changedTouches);
-		var x = event.changedTouches[0].clientX;
-		var y = event.changedTouches[0].clientY;
-		$(".lottery-scroll .lotterycup").removeClass("lotterycup_movex");	
-			$(".lottery-scroll .lotterydata").removeClass("lotterydata_movex");
-		if(parseInt(x)-parseInt(slideParams.originx) > 30){
-			if(lottery_config.current_lottery_display> 0){
-				lottery_config.current_lottery_display = lottery_config.current_lottery_display- 1 ;
-				$(".lottery-scroll").animate({
-					"left" : -lottery_config.current_lottery_display*100 + "%"
-				},300,function(){
-					$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
-					$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
-				});
-				lottery_config.setCheckStatus();
-			}else{
-				//如果滑动到边界则不做滑动处理
-			}
-		}else if(parseInt(x)-parseInt(slideParams.originx)<=-30){
-			// lottery_config.current_lottery_display = lottery_config.current_lottery_display<lottery_config.count? (lottery_config.current_lottery_display+ 1):lottery_config.current_lottery_display ;
-			console.log("lottery_config.current_lottery_display = " +lottery_config.current_lottery_display);
-			if(lottery_config.current_lottery_display<lottery_config.count-1){
-				lottery_config.current_lottery_display = lottery_config.current_lottery_display+ 1 ;
-				$(".lottery-scroll").animate({
-					"left" : -lottery_config.current_lottery_display*100 + "%"
-				},300,function(){
-					$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
-					$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
-				});
-				lottery_config.setCheckStatus();
-			}else{
-				//如果滑动到边界则不做滑动处理
+		// console.log(event.changedTouches);
+		// var length = event.changedTouches.length;
+		// alert(length);
+		if(flag){
+			var x = event.changedTouches[0].clientX;
+			var y = event.changedTouches[0].clientY;
+			$(".lottery-scroll .lotterycup").removeClass("lotterycup_movex");	
+				$(".lottery-scroll .lotterydata").removeClass("lotterydata_movex");
+			if(parseInt(x)-parseInt(slideParams.originx) > 50){
+				if(lottery_config.current_lottery_display> 0){
+					lottery_config.current_lottery_display = lottery_config.current_lottery_display- 1 ;
+					$(".lottery-scroll").animate({
+						"left" : -lottery_config.current_lottery_display*100 + "%"
+					},300,function(){
+						$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
+						$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
+					});
+					lottery_config.setCheckStatus();
+				}else{
+					//如果滑动到边界则不做滑动处理
+				}
+			}else if(parseInt(x)-parseInt(slideParams.originx)<=-50){
+				// lottery_config.current_lottery_display = lottery_config.current_lottery_display<lottery_config.count? (lottery_config.current_lottery_display+ 1):lottery_config.current_lottery_display ;
+				console.log("lottery_config.current_lottery_display = " +lottery_config.current_lottery_display);
+				if(lottery_config.current_lottery_display<lottery_config.count-1){
+					lottery_config.current_lottery_display = lottery_config.current_lottery_display+ 1 ;
+					$(".lottery-scroll").animate({
+						"left" : -lottery_config.current_lottery_display*100 + "%"
+					},300,function(){
+						$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
+						$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
+					});
+					lottery_config.setCheckStatus();
+				}else{
+					//如果滑动到边界则不做滑动处理
+				}
 			}
 		}
+
 	},false);
+
+//下期预估事件
+	$(".mid_leng_button").bind({
+		"click" : function(event){
+			console.log(this.parentNode.children[1]);
+			this.parentNode.children[1].style.display = "block";
+		}
+	},false);
+	// document.getElementsByClassName("mid_leng_button")[0].addEventListener("click",function(event){
+	// 	console.log(this.parentNode.children[1]);
+	// 	this.parentNode.children[1].style.display = "block";
+	// },false);
 })

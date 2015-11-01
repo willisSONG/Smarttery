@@ -6,23 +6,62 @@
 	display : block;
 	margin: 0;
 	padding: 0;
+	font-weight : bold;
+	font-family: arial;
 	width : @ballWidth;
 	height : @ballHeight;
 	line-height:@ballHeight;
 	border-radius : @ballHeight/2+1px ;
 	color : @color;
 	text-align : center;
-	background : linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.5));
-	background : -moz-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.5));
-	background : -ms-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.5));
-	background : -webkit-linear-gradient(30% 0 , rgba(255,255,255,1) 60%, rgba(100,100,100,.5));
-	background : -webkit-gradient(linear,30% 0,70% 100%,color-stop(60%,rgba(255,255,255,1)),color-stop(100%,rgba(100,100,100,.5)));
+	background : linear-gradient(30% 0 , rgba(255,255,255,1) 100%, rgba(10,10,10,.0));
+	background : -moz-linear-gradient(30% 0 , rgba(255,255,255,1) 100%, rgba(10,10,10,.0));
+	background : -ms-linear-gradient(30% 0 , rgba(255,255,255,1) 100%, rgba(10,10,10,.0));
+	background : -webkit-linear-gradient(30% 0 , rgba(255,255,255,1) 100%, rgba(10,10,10,.0));
+	background : -webkit-gradient(linear,30% 0,70% 100%,from(transparent),to(rgba(255,255,255,1)),color-stop(0%,rgba(255,255,255,1)),color-stop(60%,rgba(255,255,255,1)));
+	// box-shadow: rgba(255,255,255,.3) 0 2px 3px;
+
 }
 .simpleballwrapper_red{
 	.simpleballwrapper();
+	+.ballshadow{
+		position: absolute;
+		display: block;
+		width: @ballWidth;
+		height : @ballHeight;
+		border-radius : @ballHeight/2+1px ;
+		left : 5px;
+		top : 0;
+		margin : 0;
+		background : linear-gradient(30% 0,transparent 60%,rgba(10,10,10,.3));
+		background : -webkit-linear-gradient(30% 0,transparent 60%,rgba(10,10,10,.3));
+		background : -moz-linear-gradient(30% 0,transparent 60%,rgba(10,10,10,.3));
+		background : -ms-linear-gradient(30% 0,transparent 60%,rgba(10,10,10,.3));
+		background : -o-linear-gradient(30% 0,transparent 60%,rgba(10,10,10,.3));
+		background : -webkit-gradient(linear,30% 0,70% 100%,from(transparent),to(rgba(10,10,10,.3)),color-stop(60%,transparent),color-stop(100%,rgba(10,10,10,.3)));
+
+		z-index: -1;
+	}
 }
 .simpleballwrapper_blue{
 	.simpleballwrapper(rgba(0,0,255,.6));
+	+.ballshadow{
+		position: absolute;
+		display: block;
+		width: @ballWidth;
+		height : @ballHeight;
+		border-radius : @ballHeight/2+1px ;
+		left : 5px;
+		top : 0;
+		margin : 0;
+		background : linear-gradient(30% 0,transparent 60%,rgba(10,10,10,.3));
+		background : -webkit-linear-gradient(30% 0,transparent 60%,rgba(10,10,10,.3));
+		background : -moz-linear-gradient(30% 0,transparent 60%,rgba(10,10,10,.3));
+		background : -ms-linear-gradient(30% 0,transparent 60%,rgba(10,10,10,.3));
+		background : -o-linear-gradient(30% 0,transparent 60%,rgba(10,10,10,.3));
+		background : -webkit-gradient(linear,30% 0,70% 100%,from(transparent),to(rgba(10,10,10,.3)),color-stop(60%,transparent),color-stop(100%,rgba(10,10,10,.3)));
+		z-index: -1;
+	}
 }
 .boxmodel(@model:1){
 	/*旧写法*/
@@ -48,6 +87,7 @@
 	// .boxmodel;//在style中
 	// .boxmodel();
 	// border : 1pt solid rgba(255,255,255,.7);
+	display :none;
 	border-top : 1px solid rgba(255,255,255,.7);
 	border-bottom : 1px solid rgba(255,255,255,.7);
 	// border-bottom : 1px solid linear-gradient(0 0,rgba(255,255,255,.7),transparent);
@@ -134,6 +174,7 @@
 			display : block;
 			white-space: wrap;
 			margin: 0;
+			margin-top : 3px;
 			padding: 0;
 			list-style-type : none;
 			with : auto ;
@@ -153,28 +194,32 @@
 					}
 					// border : 1px solid rgba(255,255,255,.7);
 					/*滚入动画触发*/
-					animation : ballrollingin 2s ease-out .7s 1;
-					-o-animation : ballrollingin 2s ease-out .7s 1;
-					-moz-animation : ballrollingin 2s ease-out .7s 1;
-					-ms-animation : ballrollingin 2s ease-out .7s 1;
-					-webkit-animation : ballrollingin 2s ease-out .7s 1;
+					animation : ballrollingin 2s ease-out  0s 1 backwards;
+					-o-animation : ballrollingin 2s ease-out  0s 1 backwards;
+					-moz-animation : ballrollingin 2s ease-out  0s 1 backwards;
+					-ms-animation : ballrollingin 2s ease-out  0s 1 backwards;
+					-webkit-animation : ballrollingin 2s ease-out  0s 1 backwards;
 				}
 				&:nth-of-type(2){/*充当阴影*/
-					height : @ballHeight/4;
-					width : @ballWidth/4;
-					background : rgba(255,255,255,.2);
+					height : @ballHeight/2;
+					width : @ballWidth;
+					// background : rgba(255,255,255,.2);
+					background : -webkit-radial-gradient(ellipse closest-side,rgba(255,255,255,.1) ,transparent);
+					background : -moz-radial-gradient(ellipse closest-side,rgba(255,255,255,.1) ,transparent);
+					background : -ms-radial-gradient(ellipse closest-side,rgba(255,255,255,.1) ,transparent);
+					background : -o-radial-gradient(ellipse closest-side,rgba(255,255,255,.1) ,transparent);
+					background : -webkit-gradient(radial,center center , 0,center center, 50% ,from(rgba(255,255,255,.4)),to(transparent));
 					position: relative;
 					top : -5px;
 					z-index: -1;
 					display : block;
-					animation : ballshadowfollow 2s ease-out .7s 1;
-					-o-animation : ballshadowfollow 2s ease-out .7s 1;
-					-moz-animation : ballshadowfollow 2s ease-out .7s 1;
-					-ms-animation : ballshadowfollow 2s ease-out .7s 1;
-					-webkit-animation : ballshadowfollow 2s ease-out .7s 1;
-					border-radius : @ballWidth/6+1px;
-					margin-left : @ballWidth/2-@ballWidth/8;
-					box-shadow : rgba(255,255,255,1) 0px 0px 10px;//阴影效果
+					-o-animation : ballshadowfollow 2s ease-out  0s 1 backwards;
+					-moz-animation : ballshadowfollow 2s ease-out  0s 1 backwards;
+					-ms-animation : ballshadowfollow 2s ease-out  0s 1 backwards;
+					-webkit-animation : ballshadowfollow 2s ease-out  0s 1 backwards;
+					border-radius : @ballWidth/2+1px;
+					margin-left : 0;
+					// box-shadow : rgba(255,255,255,1) 0px 0px 10px;//阴影效果
 				}
 			}
 		}
@@ -224,46 +269,46 @@
 /*彩票球阴影跟随动画*/
 @-webkit-keyframes ballshadowfollow {
 	0% {
-		transform :translateX(500px);
+		-webkit-transform :translateX(500px) scale(1,.5);
 	}
 	100% {
 		/* style */
-		webkit-tranform : translateX(0);
+		webkit-tranform : translateX(0) scale(1,.5);
 	}
 }
 @-moz-keyframes ballshadowfollow {
 	0% {
-		transform :translateX(500px);
+		-moz-transform :translateX(500px) scale(1,.5);
 	}
 	100% {
 		/* style */
-		moz-tranform : translateX(0);
+		moz-tranform : translateX(0) scale(1,.5);
 	}
 }
 @-ms-keyframes ballshadowfollow {
 	0% {
-		transform :translateX(500px);
+		-ms-transform :translateX(500px) scale(1,.5);
 	}
 	100% {
 		/* style */
-		ms-tranform : translateX(0);
+		ms-tranform : translateX(0) scale(1,.5);
 	}
 }
 @-o-keyframes ballshadowfollow {
 	0% {
-		transform :translateX(500px);
+		-o-transform :translateX(500px) scale(1,.5);
 	}
 	100% {
 		/* style */
-		o-tranform : translateX(0);
+		o-tranform : translateX(0) scale(1,.5);
 	}
 }
 @keyframes ballshadowfollow {
 	0% {
-		transform :translateX(500px);
+		transform :translateX(500px) scale(1,.5);
 	}
 	100% {
 		/* style */
-		tranform : translateX(0);
+		tranform : translateX(0) scale(1,.5);
 	}
 }
