@@ -1,4 +1,10 @@
-/* line 6, style.less */
+@charset "UTF-8";
+/**
+ *-------author : Willis Song
+ *-------smarttery-main stylesheet
+ *------- Year : 2015
+ */
+/* line 12, style.less */
 body,
 html {
   margin: 0;
@@ -21,7 +27,7 @@ html {
   -o-perpective-origin: 0 50%;
   -webkit-perpective-origin: 0 50%;
 }
-/* line 29, style.less */
+/* line 35, style.less */
 input,
 textarea,
 p,
@@ -31,14 +37,14 @@ button {
   color: inherit;
   background-color: inherit;
 }
-/* line 54, style.less */
+/* line 60, style.less */
 .container {
   height: 100%;
   width: 100%;
   padding: 0;
   margin: 0;
 }
-/* line 92, style.less */
+/* line 98, style.less */
 .slidetool {
   position: fixed;
   top: 10px;
@@ -49,7 +55,7 @@ button {
   padding: 0 ;
   z-index: 2;
 }
-/* line 104, style.less */
+/* line 110, style.less */
 .slidetool > ul {
   width: 100%;
   height: 20px;
@@ -59,7 +65,7 @@ button {
   display: block;
   text-align: center;
 }
-/* line 113, style.less */
+/* line 119, style.less */
 .slidetool > ul li {
   position: relative;
   display: inline-block;
@@ -68,7 +74,7 @@ button {
   line-height: 10px;
   margin-left: 5px;
 }
-/* line 124, style.less */
+/* line 130, style.less */
 .slidetool > ul li span {
   display: inline-block;
   width: 100%;
@@ -81,7 +87,7 @@ button {
   -ms-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
 }
-/* line 136, style.less */
+/* line 142, style.less */
 .slidetool > ul li input {
   position: absolute;
   width: 100%;
@@ -95,15 +101,15 @@ button {
   opacity: 0;
   filter: alpha(opacity=0);
 }
-/* line 149, style.less */
+/* line 155, style.less */
 .slidetool > ul li input:hover {
   cursor: pointer;
 }
-/* line 153, style.less */
+/* line 159, style.less */
 .slidetool > ul li input:checked + span {
   background: #ffffff;
 }
-/* line 167, style.less */
+/* line 173, style.less */
 .lottery-scroll,
 .lottery-panel {
   width: 100%;
@@ -116,11 +122,11 @@ button {
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
 }
-/* line 179, style.less */
+/* line 185, style.less */
 .lottery-scroll .lottery-panel {
   background: #b45b3e;
 }
-/* line 185, style.less */
+/* line 191, style.less */
 .lottery-scroll .lottery-panel .lotterycup {
   position: absolute;
   left: 10%;
@@ -129,7 +135,7 @@ button {
   text-align: center;
   vertical-align: middle;
 }
-/* line 198, style.less */
+/* line 204, style.less */
 .lottery-scroll .lottery-panel .lotterydata {
   display: block;
   width: 40%;
@@ -148,7 +154,7 @@ button {
   font-weight: lighter;
   border-radius: 5px;
 }
-/* line 217, style.less */
+/* line 223, style.less */
 .lottery-scroll .lottery-panel .lotterydata .curnt_lotry_info {
   min-height: 30%;
   /*change*/
@@ -157,7 +163,7 @@ button {
   /*change*/
   position: relative;
 }
-/* line 227, style.less */
+/* line 233, style.less */
 .lottery-scroll .lottery-panel .lotterydata .curnt_lotry_info > ul li {
   /*旧写法*/
   /*新写法*/
@@ -192,15 +198,15 @@ button {
   line-height: 1.5em;
   text-shadow: rgba(255, 255, 255, 0.2) 0 1px 1px;
 }
-/* line 240, style.less */
+/* line 246, style.less */
 .lottery-scroll .lottery-panel .lotterydata .curnt_lotry_info > ul li [class^=simpleballwrapper] {
   margin-left: 5px;
 }
-/* line 242, style.less */
+/* line 248, style.less */
 .lottery-scroll .lottery-panel .lotterydata .curnt_lotry_info > ul li [class^=simpleballwrapper] + .ballshadow {
   left: 10px !important;
 }
-/* line 250, style.less */
+/* line 256, style.less */
 .lottery-scroll .lottery-panel .lotterydata .mid_leng_button {
   padding: 0;
   bottom: 0;
@@ -219,14 +225,14 @@ button {
   right: 5%;
   box-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
 }
-/* line 267, style.less */
+/* line 273, style.less */
 .lottery-scroll .lottery-panel .lotterydata .mid_leng_button:hover {
   cursor: pointer;
   border: 1pt solid #fff ;
   background: transparent;
   color: #fff;
 }
-/* line 271, style.less */
+/* line 277, style.less */
 .lottery-scroll .lottery-panel .lotterydata .mid_leng_button:hover::after {
   border-top: 1pt solid #fff;
   border-right: 1pt solid #fff;
@@ -236,7 +242,7 @@ button {
   -webkit-transform: translate(0, -5px) rotate(-45deg);
   -moz-transform: translate(0, -5px) rotate(-45deg);
 }
-/* line 280, style.less */
+/* line 286, style.less */
 .lottery-scroll .lottery-panel .lotterydata .mid_leng_button:hover span {
   transform: translate(-25px, 0);
   -o-transform: translate(-25px, 0);
@@ -244,7 +250,7 @@ button {
   -webkit-transform: translate(-25px, 0);
   -moz-transform: translate(-25px, 0);
 }
-/* line 289, style.less */
+/* line 295, style.less */
 .lottery-scroll .lottery-panel .lotterydata .mid_leng_button::after {
   content: "";
   width: 12.5px;
@@ -267,16 +273,16 @@ button {
   right: 15%;
   top: 50%;
 }
-/* line 312, style.less */
+/* line 318, style.less */
 .lottery-scroll .lottery-panel .lotterydata .mid_leng_button:active {
   background: #fff;
   color: #b45b3e ;
 }
-/* line 315, style.less */
+/* line 321, style.less */
 .lottery-scroll .lottery-panel .lotterydata .mid_leng_button:active::after {
   border-color: #b45b3e;
 }
-/* line 320, style.less */
+/* line 326, style.less */
 .lottery-scroll .lottery-panel .lotterydata .mid_leng_button span {
   display: inline-block;
   width: auto;
@@ -291,13 +297,13 @@ button {
   -ms-transition: all ease-out 0.4s;
 }
 @-webkit-keyframes btn_arrow_dh {
-  /* line 344, style.less */
+  /* line 350, style.less */
   0% {
     -webkit-transform: translateY(0);
     opacity: 1;
     filter: alpha(opacity=100);
   }
-  /* line 349, style.less */
+  /* line 355, style.less */
   100% {
     -webkit-transform: translateY(10px);
     opacity: 0;
@@ -305,13 +311,13 @@ button {
   }
 }
 @-moz-keyframes btn_arrow_dh {
-  /* line 356, style.less */
+  /* line 362, style.less */
   0% {
     -moz-transform: translateY(0);
     opacity: 1;
     filter: alpha(opacity=100);
   }
-  /* line 361, style.less */
+  /* line 367, style.less */
   100% {
     -moz-transform: translateY(10px);
     opacity: 0;
@@ -319,13 +325,13 @@ button {
   }
 }
 @-ms-keyframes btn_arrow_dh {
-  /* line 368, style.less */
+  /* line 374, style.less */
   0% {
     -ms-transform: translateY(0);
     opacity: 1;
     filter: alpha(opacity=100);
   }
-  /* line 373, style.less */
+  /* line 379, style.less */
   100% {
     -ms-transform: translateY(10px);
     opacity: 0;
@@ -333,13 +339,13 @@ button {
   }
 }
 @-o-keyframes btn_arrow_dh {
-  /* line 380, style.less */
+  /* line 386, style.less */
   0% {
     -o-transform: translateY(0);
     opacity: 1;
     filter: alpha(opacity=100);
   }
-  /* line 385, style.less */
+  /* line 391, style.less */
   100% {
     -o-transform: translateY(10px);
     opacity: 0;
@@ -347,20 +353,20 @@ button {
   }
 }
 @keyframes btn_arrow_dh {
-  /* line 392, style.less */
+  /* line 398, style.less */
   0% {
     transform: translateY(0);
     opacity: 1;
     filter: alpha(opacity=100);
   }
-  /* line 397, style.less */
+  /* line 403, style.less */
   100% {
     transform: translateY(10px);
     opacity: 0;
     filter: alpha(opacity=0);
   }
 }
-/* line 404, style.less */
+/* line 410, style.less */
 .lottery-scroll #ssq {
   left: 0;
   position: absolute;
@@ -371,12 +377,12 @@ button {
   background: -webkit-gradient(linear, 0 0, right bottom, from(#a9563b), to(#b46146));
   background: -ms-linear-gradient(0 0, #a9563b, #b46146);
 }
-/* line 416, style.less */
+/* line 422, style.less */
 .lottery-scroll #dlt {
   left: 100%;
   position: absolute;
 }
-/* line 420, style.less */
+/* line 426, style.less */
 .lottery-scroll #qxc {
   left: 200%;
   position: absolute;
@@ -927,7 +933,7 @@ button {
   }
 }
 /*----------------------彩票内容滑动动画 end----------------------------------------------------*/
-/* line 429, style.less */
+/* line 435, style.less */
 .panel-init-slide {
   animation: lottery_init_slide 0.5s ease-in-out 0.1s 1 forwards;
   -o-animation: lottery_init_slide 0.5s ease-in-out 0.1s 1 forwards;
@@ -936,13 +942,13 @@ button {
   -webkit-animation: lottery_init_slide 0.5s ease-in-out 0.1s 1 forwards;
 }
 @-webkit-keyframes lottery_init_slide {
-  /* line 438, style.less */
+  /* line 444, style.less */
   0% {
     transform: translateX(100%);
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  /* line 443, style.less */
+  /* line 449, style.less */
   100% {
     transform: translateX(0);
     opacity: 1 ;
@@ -950,13 +956,13 @@ button {
   }
 }
 @-moz-keyframes lottery_init_slide {
-  /* line 450, style.less */
+  /* line 456, style.less */
   0% {
     transform: translateX(100%);
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  /* line 455, style.less */
+  /* line 461, style.less */
   100% {
     transform: translateX(0);
     opacity: 1 ;
@@ -964,13 +970,13 @@ button {
   }
 }
 @-ms-keyframes lottery_init_slide {
-  /* line 462, style.less */
+  /* line 468, style.less */
   0% {
     transform: translateX(100%);
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  /* line 467, style.less */
+  /* line 473, style.less */
   100% {
     transform: translateX(0);
     opacity: 1 ;
@@ -978,13 +984,13 @@ button {
   }
 }
 @-o-keyframes lottery_init_slide {
-  /* line 474, style.less */
+  /* line 480, style.less */
   0% {
     transform: translateX(100%);
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  /* line 479, style.less */
+  /* line 485, style.less */
   100% {
     transform: translateX(0);
     opacity: 1 ;
@@ -992,13 +998,13 @@ button {
   }
 }
 @keyframes lottery_init_slide {
-  /* line 486, style.less */
+  /* line 492, style.less */
   0% {
     transform: translateX(100%);
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  /* line 491, style.less */
+  /* line 497, style.less */
   100% {
     transform: translateX(0);
     opacity: 1 ;
@@ -1007,11 +1013,11 @@ button {
 }
 /*computer*/
 @media only screen and (min-width: 1024px) {
-  /* line 501, style.less */
+  /* line 507, style.less */
   .lottery-scroll .lottery-panel {
     /*280px*/
   }
-  /* line 504, style.less */
+  /* line 510, style.less */
   .lottery-scroll .lottery-panel .lotterycup {
     width: 300px;
     /*change*/
@@ -1022,7 +1028,7 @@ button {
     left: 50%;
     margin-left: -450px;
   }
-  /* line 515, style.less */
+  /* line 521, style.less */
   .lottery-scroll .lottery-panel .lotterydata {
     width: 40%;
     /*change*/
@@ -1033,11 +1039,11 @@ button {
 }
 /*ipad 横屏*/
 @media only screen and (min-width: 384px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 527, style.less */
+  /* line 533, style.less */
   .lottery-scroll .lottery-panel {
     /*280px*/
   }
-  /* line 530, style.less */
+  /* line 536, style.less */
   .lottery-scroll .lottery-panel .lotterycup {
     width: 40%;
     /*change*/
@@ -1045,7 +1051,7 @@ button {
     /*change*/
     margin-top: -100px;
   }
-  /* line 536, style.less */
+  /* line 542, style.less */
   .lottery-scroll .lottery-panel .lotterydata {
     width: 40%;
     /*change*/
@@ -1054,7 +1060,7 @@ button {
     right: 10%;
     top: 0;
   }
-  /* line 543, style.less */
+  /* line 549, style.less */
   .lottery-scroll .lottery-panel .lotterydata .mid_leng_button {
     bottom: 1% ;
     font-size: 100%;
@@ -1063,12 +1069,12 @@ button {
 /*i pad mini 或手机 竖屏 (portrait)
 */
 @media screen and (max-width: 768px) and (orientation: portrait) {
-  /* line 556, style.less */
+  /* line 562, style.less */
   .lottery-scroll .lottery-panel .lotterycup {
     left: 5%;
     display: none;
   }
-  /* line 561, style.less */
+  /* line 567, style.less */
   .lottery-scroll .lottery-panel .lotterydata {
     /*change*/
     height: 100%;
@@ -1087,12 +1093,12 @@ button {
 /*手机 横屏 (portrait)
 */
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  /* line 580, style.less */
+  /* line 586, style.less */
   .lottery-scroll .lottery-panel .lotterycup {
     left: 5%;
     display: none;
   }
-  /* line 585, style.less */
+  /* line 591, style.less */
   .lottery-scroll .lottery-panel .lotterydata {
     /*change*/
     height: 100%;
@@ -1130,6 +1136,24 @@ button {
   background: -webkit-linear-gradient(30% 0, #ffffff 100%, rgba(10, 10, 10, 0));
   background: -webkit-gradient(linear, 30% 0, 70% 100%, from(transparent), to(#ffffff), color-stop(0%, #ffffff), color-stop(60%, #ffffff));
 }
+/* line 46, lotterywrapper.less */
+.simpleballwrapper_red + .ballshadow {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 16px;
+  left: 5px;
+  top: 0;
+  margin: 0;
+  background: linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -webkit-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -moz-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -ms-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -o-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -webkit-gradient(linear, 30% 0, 70% 100%, from(transparent), to(rgba(10, 10, 10, 0.3)), color-stop(60%, transparent), color-stop(100%, rgba(10, 10, 10, 0.3)));
+  z-index: -1;
+}
 /* line 27, lotterywrapper.less */
 .simpleballwrapper_red + .ballshadow {
   position: absolute;
@@ -1149,6 +1173,24 @@ button {
   z-index: -1;
 }
 /* line 46, lotterywrapper.less */
+.simpleballwrapper + .ballshadow {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 16px;
+  left: 5px;
+  top: 0;
+  margin: 0;
+  background: linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -webkit-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -moz-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -ms-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -o-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -webkit-gradient(linear, 30% 0, 70% 100%, from(transparent), to(rgba(10, 10, 10, 0.3)), color-stop(60%, transparent), color-stop(100%, rgba(10, 10, 10, 0.3)));
+  z-index: -1;
+}
+/* line 64, lotterywrapper.less */
 .simpleballwrapper_blue {
   display: block;
   margin: 0;
@@ -1167,7 +1209,7 @@ button {
   background: -webkit-linear-gradient(30% 0, #ffffff 100%, rgba(10, 10, 10, 0));
   background: -webkit-gradient(linear, 30% 0, 70% 100%, from(transparent), to(#ffffff), color-stop(0%, #ffffff), color-stop(60%, #ffffff));
 }
-/* line 48, lotterywrapper.less */
+/* line 66, lotterywrapper.less */
 .simpleballwrapper_blue + .ballshadow {
   position: absolute;
   display: block;
@@ -1185,7 +1227,7 @@ button {
   background: -webkit-gradient(linear, 30% 0, 70% 100%, from(transparent), to(rgba(10, 10, 10, 0.3)), color-stop(60%, transparent), color-stop(100%, rgba(10, 10, 10, 0.3)));
   z-index: -1;
 }
-/* line 86, lotterywrapper.less */
+/* line 104, lotterywrapper.less */
 .nextnumsection {
   display: none;
   border-top: 1px solid rgba(255, 255, 255, 0.7);
@@ -1218,27 +1260,29 @@ button {
   padding-top: 1%;
   padding-bottom: 3%;
 }
-/* line 125, lotterywrapper.less */
+/* line 143, lotterywrapper.less */
 .nextnumsection h1 {
   font-weight: lighter;
   font-family: serif;
   clean: both;
 }
-/* line 131, lotterywrapper.less */
+/* line 149, lotterywrapper.less */
 .nextnumsection dl {
   margin: 0 ;
   padding: 0;
   clear: both;
+  width: 90%;
+  margin-right: 10%;
 }
-/* line 137, lotterywrapper.less */
+/* line 156, lotterywrapper.less */
 .nextnumsection dl > dt {
   margin-left: 5px;
 }
-/* line 140, lotterywrapper.less */
+/* line 160, lotterywrapper.less */
 .nextnumsection dl > dd {
   margin-left: 0;
 }
-/* line 144, lotterywrapper.less */
+/* line 167, lotterywrapper.less */
 .nextnumsection .lotterynums {
   /*旧写法*/
   /*新写法*/
@@ -1271,23 +1315,28 @@ button {
   -moz-box-wrap: wrap;
   -ms-box-wrap: wrap;
   -o-box-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
   -webkit-flex-flow: wrap;
   -moz-flex-flow: wrap;
   -ms-flex-flow: wrap;
   -o-flex-flow: wrap;
   flex-flow: wrap;
+  align-items: center;
+  -webkit-align-items: center;
   margin: 0;
   margin-left: 30px;
+  /*跟上面保持对齐*/
   margin-top: 10px;
   padding: 0;
-  width: 100%;
   /* perspective : */
   /*border : 1px solid;*/
 }
-/* line 173, lotterywrapper.less */
+/* line 205, lotterywrapper.less */
 .nextnumsection .lotterynums li {
-  display: block;
-  white-space: wrap;
   margin: 0;
   margin-top: 3px;
   padding: 0;
@@ -1295,12 +1344,12 @@ button {
   with: auto ;
   height: auto;
   margin-left: 5px;
-  perspective: 100px;
-  -o-perspective: 100px;
-  -moz-perspective: 100px;
-  -ms-perspective: 100px;
 }
-/* line 188, lotterywrapper.less */
+/* line 219, lotterywrapper.less */
+.nextnumsection .lotterynums li > div {
+  position: relative;
+}
+/* line 223, lotterywrapper.less */
 .nextnumsection .lotterynums li span:first-of-type {
   /*滚入动画触发*/
   animation: ballrollingin 2s ease-out 0s 1 backwards;
@@ -1309,7 +1358,7 @@ button {
   -ms-animation: ballrollingin 2s ease-out 0s 1 backwards;
   -webkit-animation: ballrollingin 2s ease-out 0s 1 backwards;
 }
-/* line 189, lotterywrapper.less */
+/* line 224, lotterywrapper.less */
 .nextnumsection .lotterynums li span:first-of-type.simpleballwrapper {
   display: block;
   margin: 0;
@@ -1327,6 +1376,24 @@ button {
   background: -ms-linear-gradient(30% 0, #ffffff 100%, rgba(10, 10, 10, 0));
   background: -webkit-linear-gradient(30% 0, #ffffff 100%, rgba(10, 10, 10, 0));
   background: -webkit-gradient(linear, 30% 0, 70% 100%, from(transparent), to(#ffffff), color-stop(0%, #ffffff), color-stop(60%, #ffffff));
+}
+/* line 46, lotterywrapper.less */
+.nextnumsection .lotterynums li span:first-of-type.simpleballwrapper + .ballshadow {
+  position: absolute;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 16px;
+  left: 5px;
+  top: 0;
+  margin: 0;
+  background: linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -webkit-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -moz-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -ms-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -o-linear-gradient(30% 0, transparent 60%, rgba(10, 10, 10, 0.3));
+  background: -webkit-gradient(linear, 30% 0, 70% 100%, from(transparent), to(rgba(10, 10, 10, 0.3)), color-stop(60%, transparent), color-stop(100%, rgba(10, 10, 10, 0.3)));
+  z-index: -1;
 }
 /* line 27, lotterywrapper.less */
 .nextnumsection .lotterynums li span:first-of-type.simpleballwrapper + .ballshadow {
@@ -1346,7 +1413,7 @@ button {
   background: -webkit-gradient(linear, 30% 0, 70% 100%, from(transparent), to(rgba(10, 10, 10, 0.3)), color-stop(60%, transparent), color-stop(100%, rgba(10, 10, 10, 0.3)));
   z-index: -1;
 }
-/* line 192, lotterywrapper.less */
+/* line 227, lotterywrapper.less */
 .nextnumsection .lotterynums li span:first-of-type.simpleballwrapper_blue {
   display: block;
   margin: 0;
@@ -1365,7 +1432,7 @@ button {
   background: -webkit-linear-gradient(30% 0, #ffffff 100%, rgba(10, 10, 10, 0));
   background: -webkit-gradient(linear, 30% 0, 70% 100%, from(transparent), to(#ffffff), color-stop(0%, #ffffff), color-stop(60%, #ffffff));
 }
-/* line 48, lotterywrapper.less */
+/* line 66, lotterywrapper.less */
 .nextnumsection .lotterynums li span:first-of-type.simpleballwrapper_blue + .ballshadow {
   position: absolute;
   display: block;
@@ -1383,131 +1450,122 @@ button {
   background: -webkit-gradient(linear, 30% 0, 70% 100%, from(transparent), to(rgba(10, 10, 10, 0.3)), color-stop(60%, transparent), color-stop(100%, rgba(10, 10, 10, 0.3)));
   z-index: -1;
 }
-/* line 203, lotterywrapper.less */
+/* line 238, lotterywrapper.less */
 .nextnumsection .lotterynums li span:nth-of-type(2) {
   /*充当阴影*/
-  height: 15px;
-  width: 30px;
-  background: -webkit-radial-gradient(ellipse closest-side, rgba(255, 255, 255, 0.1), transparent);
-  background: -moz-radial-gradient(ellipse closest-side, rgba(255, 255, 255, 0.1), transparent);
-  background: -ms-radial-gradient(ellipse closest-side, rgba(255, 255, 255, 0.1), transparent);
-  background: -o-radial-gradient(ellipse closest-side, rgba(255, 255, 255, 0.1), transparent);
-  background: -webkit-gradient(radial, center center, 0, center center, 50%, from(rgba(255, 255, 255, 0.4)), to(transparent));
-  position: relative;
-  top: -5px;
-  z-index: -1;
-  display: block;
+  /**
+					 *控制动画
+					**/
   -o-animation: ballshadowfollow 2s ease-out 0s 1 backwards;
   -moz-animation: ballshadowfollow 2s ease-out 0s 1 backwards;
   -ms-animation: ballshadowfollow 2s ease-out 0s 1 backwards;
   -webkit-animation: ballshadowfollow 2s ease-out 0s 1 backwards;
   border-radius: 16px;
-  margin-left: 0;
 }
 @-webkit-keyframes ballrollingin {
-  /* line 229, lotterywrapper.less */
+  /* line 267, lotterywrapper.less */
   0% {
     -webkit-transform: translateX(500px) rotateZ(0deg);
   }
-  /* line 232, lotterywrapper.less */
+  /* line 270, lotterywrapper.less */
   100% {
     -webkit-transform: translateX(0) rotateZ(-720deg);
     /* style */
   }
 }
 @-moz-keyframes ballrollingin {
-  /* line 238, lotterywrapper.less */
+  /* line 276, lotterywrapper.less */
   0% {
     -moz-transform: translateX(500px) rotateZ(0deg);
   }
-  /* line 241, lotterywrapper.less */
+  /* line 279, lotterywrapper.less */
   100% {
     -moz-transform: translateX(0) rotateZ(-720deg);
   }
 }
 @-ms-keyframes ballrollingin {
-  /* line 246, lotterywrapper.less */
+  /* line 284, lotterywrapper.less */
   0% {
     -ms-transform: translateX(500px) rotateZ(0deg);
   }
-  /* line 249, lotterywrapper.less */
+  /* line 287, lotterywrapper.less */
   100% {
     -ms-transform: translateX(0) rotateZ(-720deg);
   }
 }
 @-o-keyframes ballrollingin {
-  /* line 254, lotterywrapper.less */
+  /* line 292, lotterywrapper.less */
   0% {
     -o-transform: translateX(500px) rotateZ(0deg);
   }
-  /* line 257, lotterywrapper.less */
+  /* line 295, lotterywrapper.less */
   100% {
     -o-transform: translateX(0) rotateZ(-720deg);
   }
 }
 @keyframes ballrollingin {
-  /* line 262, lotterywrapper.less */
+  /* line 300, lotterywrapper.less */
   0% {
     transform: translateX(500px) rotateZ(0deg);
   }
-  /* line 265, lotterywrapper.less */
+  /* line 303, lotterywrapper.less */
   100% {
     transform: translateX(0) rotateZ(-720deg);
   }
 }
 /*彩票球阴影跟随动画*/
 @-webkit-keyframes ballshadowfollow {
-  /* line 271, lotterywrapper.less */
+  /* line 309, lotterywrapper.less */
   0% {
-    -webkit-transform: translateX(500px) scale(1, 0.5);
+    -webkit-transform: translateX(500px);
   }
-  /* line 274, lotterywrapper.less */
+  /* line 312, lotterywrapper.less */
   100% {
     /* style */
-    webkit-tranform: translateX(0) scale(1, 0.5);
+    webkit-tranform: translateX(0);
   }
 }
 @-moz-keyframes ballshadowfollow {
-  /* line 280, lotterywrapper.less */
+  /* line 318, lotterywrapper.less */
   0% {
-    -moz-transform: translateX(500px) scale(1, 0.5);
+    -moz-transform: translateX(500px);
   }
-  /* line 283, lotterywrapper.less */
+  /* line 321, lotterywrapper.less */
   100% {
     /* style */
-    moz-tranform: translateX(0) scale(1, 0.5);
+    moz-tranform: translateX(0);
   }
 }
 @-ms-keyframes ballshadowfollow {
-  /* line 289, lotterywrapper.less */
+  /* line 327, lotterywrapper.less */
   0% {
-    -ms-transform: translateX(500px) scale(1, 0.5);
+    -ms-transform: translateX(500px);
   }
-  /* line 292, lotterywrapper.less */
+  /* line 330, lotterywrapper.less */
   100% {
     /* style */
-    ms-tranform: translateX(0) scale(1, 0.5);
+    ms-tranform: translateX(0);
   }
 }
 @-o-keyframes ballshadowfollow {
-  /* line 298, lotterywrapper.less */
+  /* line 336, lotterywrapper.less */
   0% {
-    -o-transform: translateX(500px) scale(1, 0.5);
+    -o-transform: translateX(500px);
   }
-  /* line 301, lotterywrapper.less */
+  /* line 339, lotterywrapper.less */
   100% {
     /* style */
-    o-tranform: translateX(0) scale(1, 0.5);
+    o-tranform: translateX(0);
   }
 }
 @keyframes ballshadowfollow {
-  /* line 307, lotterywrapper.less */
+  /* line 345, lotterywrapper.less */
   0% {
-    transform: translateX(500px) scale(1, 0.5);
+    transform: translateX(500px);
   }
-  /* line 310, lotterywrapper.less */
+  /* line 348, lotterywrapper.less */
   100% {
     /* style */
-    tranform: translateX(0) scale(1, 0.5);
+    tranform: translateX(0);
   }
 }

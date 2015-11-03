@@ -155,7 +155,16 @@ require(["jquery"],function($){
 	$(".mid_leng_button").bind({
 		"click" : function(event){
 			console.log(this.parentNode.children[1]);
-			this.parentNode.children[1].style.display = "block";
+			console.log($(this).attr("lotterySort"));
+			$("#" + $(this).attr("lotterySort") + " .curnt_lotry_info").animate({
+				"top" : "-100%",
+				"opacity" : "0"
+			},500,function(){
+				$(this).css({
+					"display" : "none"
+				});
+			});
+			this.parentNode.children[2].style.display = "block";
 		}
 	},false);
 	// document.getElementsByClassName("mid_leng_button")[0].addEventListener("click",function(event){
