@@ -370,19 +370,14 @@ button {
 .lottery-scroll #ssq {
   left: 0;
   position: absolute;
-  background: linear-gradient(0 0, #a9563b, #b46146);
-  background: -moz-linear-gradient(0 0, #a9563b, #b46146);
-  background: -o-linear-gradient(0 0, #a9563b, #b46146);
-  background: -webkit-linear-gradient(0 0, #a9563b, #b46146);
-  background: -webkit-gradient(linear, 0 0, right bottom, from(#a9563b), to(#b46146));
-  background: -ms-linear-gradient(0 0, #a9563b, #b46146);
+  background: #b45b3e ;
 }
-/* line 422, style.less */
+/* line 423, style.less */
 .lottery-scroll #dlt {
   left: 100%;
   position: absolute;
 }
-/* line 426, style.less */
+/* line 427, style.less */
 .lottery-scroll #qxc {
   left: 200%;
   position: absolute;
@@ -933,7 +928,7 @@ button {
   }
 }
 /*----------------------彩票内容滑动动画 end----------------------------------------------------*/
-/* line 435, style.less */
+/* line 436, style.less */
 .panel-init-slide {
   animation: lottery_init_slide 0.5s ease-in-out 0.1s 1 forwards;
   -o-animation: lottery_init_slide 0.5s ease-in-out 0.1s 1 forwards;
@@ -942,13 +937,13 @@ button {
   -webkit-animation: lottery_init_slide 0.5s ease-in-out 0.1s 1 forwards;
 }
 @-webkit-keyframes lottery_init_slide {
-  /* line 444, style.less */
+  /* line 445, style.less */
   0% {
     transform: translateX(100%);
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  /* line 449, style.less */
+  /* line 450, style.less */
   100% {
     transform: translateX(0);
     opacity: 1 ;
@@ -956,13 +951,13 @@ button {
   }
 }
 @-moz-keyframes lottery_init_slide {
-  /* line 456, style.less */
+  /* line 457, style.less */
   0% {
     transform: translateX(100%);
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  /* line 461, style.less */
+  /* line 462, style.less */
   100% {
     transform: translateX(0);
     opacity: 1 ;
@@ -970,13 +965,13 @@ button {
   }
 }
 @-ms-keyframes lottery_init_slide {
-  /* line 468, style.less */
+  /* line 469, style.less */
   0% {
     transform: translateX(100%);
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  /* line 473, style.less */
+  /* line 474, style.less */
   100% {
     transform: translateX(0);
     opacity: 1 ;
@@ -984,13 +979,13 @@ button {
   }
 }
 @-o-keyframes lottery_init_slide {
-  /* line 480, style.less */
+  /* line 481, style.less */
   0% {
     transform: translateX(100%);
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  /* line 485, style.less */
+  /* line 486, style.less */
   100% {
     transform: translateX(0);
     opacity: 1 ;
@@ -998,13 +993,13 @@ button {
   }
 }
 @keyframes lottery_init_slide {
-  /* line 492, style.less */
+  /* line 493, style.less */
   0% {
     transform: translateX(100%);
     opacity: 0;
     filter: alpha(opacity=0);
   }
-  /* line 497, style.less */
+  /* line 498, style.less */
   100% {
     transform: translateX(0);
     opacity: 1 ;
@@ -1013,11 +1008,11 @@ button {
 }
 /*computer*/
 @media only screen and (min-width: 1024px) {
-  /* line 507, style.less */
+  /* line 508, style.less */
   .lottery-scroll .lottery-panel {
     /*280px*/
   }
-  /* line 510, style.less */
+  /* line 511, style.less */
   .lottery-scroll .lottery-panel .lotterycup {
     width: 300px;
     /*change*/
@@ -1028,7 +1023,7 @@ button {
     left: 50%;
     margin-left: -450px;
   }
-  /* line 521, style.less */
+  /* line 522, style.less */
   .lottery-scroll .lottery-panel .lotterydata {
     width: 40%;
     /*change*/
@@ -1039,11 +1034,11 @@ button {
 }
 /*ipad 横屏*/
 @media only screen and (min-width: 384px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 533, style.less */
+  /* line 534, style.less */
   .lottery-scroll .lottery-panel {
     /*280px*/
   }
-  /* line 536, style.less */
+  /* line 537, style.less */
   .lottery-scroll .lottery-panel .lotterycup {
     width: 40%;
     /*change*/
@@ -1051,7 +1046,7 @@ button {
     /*change*/
     margin-top: -100px;
   }
-  /* line 542, style.less */
+  /* line 543, style.less */
   .lottery-scroll .lottery-panel .lotterydata {
     width: 40%;
     /*change*/
@@ -1060,7 +1055,7 @@ button {
     right: 10%;
     top: 0;
   }
-  /* line 549, style.less */
+  /* line 550, style.less */
   .lottery-scroll .lottery-panel .lotterydata .mid_leng_button {
     bottom: 1% ;
     font-size: 100%;
@@ -1069,12 +1064,12 @@ button {
 /*i pad mini 或手机 竖屏 (portrait)
 */
 @media screen and (max-width: 768px) and (orientation: portrait) {
-  /* line 562, style.less */
+  /* line 563, style.less */
   .lottery-scroll .lottery-panel .lotterycup {
     left: 5%;
     display: none;
   }
-  /* line 567, style.less */
+  /* line 568, style.less */
   .lottery-scroll .lottery-panel .lotterydata {
     /*change*/
     height: 100%;
@@ -1093,12 +1088,12 @@ button {
 /*手机 横屏 (portrait)
 */
 @media screen and (max-width: 768px) and (orientation: landscape) {
-  /* line 586, style.less */
+  /* line 587, style.less */
   .lottery-scroll .lottery-panel .lotterycup {
     left: 5%;
     display: none;
   }
-  /* line 591, style.less */
+  /* line 592, style.less */
   .lottery-scroll .lottery-panel .lotterydata {
     /*change*/
     height: 100%;

@@ -21,13 +21,14 @@ module.exports=function(grunt){
 		browserSync: {
 			// port:8080,
 		    bsFiles: {
-		        src : 'style/*.css'
+		        src : 'style/*.css',
+		        
 		    },
 		    options: {
 		        server: {
 		            baseDir: "./",
 		        },
-		        port: 8080
+		        port: 8081
 		    }
 		}
 	});

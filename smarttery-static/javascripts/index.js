@@ -2,20 +2,26 @@ require.config({
 	baseUrl : "./",
 	paths:{
 		"jquery" : "bower_components/jquery/dist/jquery.min",
-		"a" : "a"
+		"smartterytool" : "javascripts/smarttery.slidetool"
 	}
 });
 
-require(["jquery"],function($){
-	console.log($);
-	var current_lottery_display = 0 ;
-	//网页中彩票信息配置
+require(["jquery","smartterytool"],function($,tool){
 	var lottery_config ={
-		_count : 3,//一共有几种彩票
+		"lottery_count" : 3
+	}
+	//init toolbox,初始化
+	var toolbox = tool(lottery_config);
+	toolbox.setCheckStatus();
+	// console.log(setCheckStatus);
+	var current_lottery_display = 0 ;
+	/*//网页中彩票信息配置
+	var lottery_config ={
+		c : 3,//一共有几种彩票
 		current_lottery_display : 0 ,
 		setCheckStatus : function(){//设置radiobutton状态
 			console.log("this.current_lottery_display = "+this.current_lottery_display);
-			document.getElementsByName("lottery_sort")[this.current_lottery_display]["checked"] = "checked";
+			document.getElementsByName("lottery_sort")[current_lottery_display]["checked"] = "checked";
 		}
 	}
 	Object.defineProperties(lottery_config,{
@@ -24,14 +30,12 @@ require(["jquery"],function($){
 				return this._count;
 			}
 		}
-	});
+	});*/
+	//滑动时用来记录横纵坐标
 	var slideParams = {
 		"originx" : 0,
 		"originy" : 0
 	};
-	// var setCheckStatus = function(){
-	// 	document.getElementsByName("lottery_sort")[current_lottery_display]["checked"] = "checked";
-	// }
 	$(".slidetool").bind({
 		"click" : function(event){
 			$(".lottery-scroll .lotterycup").removeClass("lotterycup_movex");	
@@ -40,38 +44,44 @@ require(["jquery"],function($){
 			var element = event.target||event.srcElement;
 			var lottery_sort = element.id || element.name;
 			if(lottery_sort && lottery_sort=="ssq_link"){
-				lottery_config.current_lottery_display = 0 ;
-				$(".lottery-scroll").animate({
-					"left" : "0"
-				},300,function(){
-					$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
-					$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
-				});
+				if(toolbox.getCurntNum() != 0){
+					toolbox.setCurnt(0);
+					$(".lottery-scroll").animate({
+						"left" : "0"
+					},300,function(){
+						$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
+						$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
+					});
+				}
 			}else if(lottery_sort && lottery_sort=="dlt_link"){
-				lottery_config.current_lottery_display = 1 ;
-				$(".lottery-scroll").animate({
-					"left" : "-100%"
-				},300,function(){
-					$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
-					$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
-				});
+				// lottery_config.current_lottery_display = 1 ;
+				if(toolbox.getCurntNum() != 1){
+					toolbox.setCurnt(1);
+					$(".lottery-scroll").animate({
+						"left" : "-100%"
+					},300,function(){
+						$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
+						$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
+					});
+				}
 
 			}else if(lottery_sort && lottery_sort=="qxc_link"){
-				lottery_config.current_lottery_display = 2 ;
-				$(".lottery-scroll").animate({
-					"left" : "-200%"
-				},300,function(){
-					$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
-					$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
-				});
+				// lottery_config.current_lottery_display = 2 ;
+				if(toolbox.getCurntNum() != 2){
+					toolbox.setCurnt(2);
+					$(".lottery-scroll").animate({
+						"left" : "-200%"
+					},300,function(){
+						$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
+						$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
+					});
+				}
 			}
 			else{
 				return false;
 			}
-			// alert(event);
 		}
 	});
-	
 	var initSlideParams = function(originx,originy,endx,endy){
 		Object.defineProperties(slideParams,{
 			"originx" : {
@@ -82,7 +92,6 @@ require(["jquery"],function($){
 			}
 		});
 		return slideParams;
-		// alert(this)
 	}
 	//触摸事件
 	var flag = false;
@@ -109,40 +118,39 @@ require(["jquery"],function($){
 		// alert(flag);
 	},false);
 	document.getElementsByClassName("lottery-scroll")[0].addEventListener("touchend",function(event){
-		// alert("touchmove");
-		// console.log(event.changedTouches);
-		// var length = event.changedTouches.length;
-		// alert(length);
 		if(flag){
 			var x = event.changedTouches[0].clientX;
 			var y = event.changedTouches[0].clientY;
 			$(".lottery-scroll .lotterycup").removeClass("lotterycup_movex");	
 				$(".lottery-scroll .lotterydata").removeClass("lotterydata_movex");
+			var curnt_num = toolbox.getCurntNum();
 			if(parseInt(x)-parseInt(slideParams.originx) > 50){
-				if(lottery_config.current_lottery_display> 0){
-					lottery_config.current_lottery_display = lottery_config.current_lottery_display- 1 ;
+				if(curnt_num > 0){
+					toolbox.setCurnt(curnt_num - 1);
 					$(".lottery-scroll").animate({
-						"left" : -lottery_config.current_lottery_display*100 + "%"
+						"left" : -toolbox.getCurntNum()*100 + "%"
 					},300,function(){
 						$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
 						$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
 					});
-					lottery_config.setCheckStatus();
+					toolbox.setCheckStatus();
 				}else{
 					//如果滑动到边界则不做滑动处理
 				}
 			}else if(parseInt(x)-parseInt(slideParams.originx)<=-50){
 				// lottery_config.current_lottery_display = lottery_config.current_lottery_display<lottery_config.count? (lottery_config.current_lottery_display+ 1):lottery_config.current_lottery_display ;
-				console.log("lottery_config.current_lottery_display = " +lottery_config.current_lottery_display);
-				if(lottery_config.current_lottery_display<lottery_config.count-1){
-					lottery_config.current_lottery_display = lottery_config.current_lottery_display+ 1 ;
+				if(curnt_num < toolbox.getLotteryCount()-1){
+					// lottery_config.current_lottery_display = lottery_config.current_lottery_display+ 1 ;
+					toolbox.setCurnt(curnt_num + 1);
 					$(".lottery-scroll").animate({
-						"left" : -lottery_config.current_lottery_display*100 + "%"
+						// "left" : -lottery_config.current_lottery_display*100 + "%"
+						"left" : -toolbox.getCurntNum()*100 + "%"
 					},300,function(){
 						$(".lottery-scroll .lotterycup").addClass("lotterycup_movex");
 						$(".lottery-scroll .lotterydata").addClass("lotterydata_movex");
 					});
-					lottery_config.setCheckStatus();
+					// lottery_config.setCheckStatus();
+					toolbox.setCheckStatus();
 				}else{
 					//如果滑动到边界则不做滑动处理
 				}
@@ -150,7 +158,6 @@ require(["jquery"],function($){
 		}
 
 	},false);
-
 //下期预估事件
 	$(".mid_leng_button").bind({
 		"click" : function(event){
@@ -167,8 +174,4 @@ require(["jquery"],function($){
 			this.parentNode.children[2].style.display = "block";
 		}
 	},false);
-	// document.getElementsByClassName("mid_leng_button")[0].addEventListener("click",function(event){
-	// 	console.log(this.parentNode.children[1]);
-	// 	this.parentNode.children[1].style.display = "block";
-	// },false);
 })
