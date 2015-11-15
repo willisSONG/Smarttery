@@ -23,7 +23,8 @@
 		return {
 			"setCheckStatus" : setCheckStatus,
 			"setCurnt" : setCurnt,
-			"getCurntNum" : getCurntNum
+			"getCurntNum" : getCurntNum,
+			"getLotteryCount" :getLotteryCount
 		};		
 	};
 
