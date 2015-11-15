@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script src="./bower_components/jquery/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<style type="text/css" >
+		.test{
+			width : 100px;
+			height : 100px;
+			background: #f0f;
+			color : #fff;
+		}
+		.add{
+			border : 2px solid #f00;
+			animation : movex 1s ease-out 0.1s 1 forwards;
+		}
+		.add div{
+			color : #ff0;
+		}
+		.add .tt{
+			color : #f00;
+		}
+		@keyframes movex{
+			from{
+
+			}
+			to{
+				transform: translateX(200px);
+			}
+		}
+		.testoffset{
+			width : 200px;
+			height : 200px;
+			left : -100px;
+			border : 1px solid #000;
+			position : relative;
+
+		}
+		body{
+			padding:0;
+			border : 1px solid #ff0;
+		}
+	</style>
+</head>
+<body>
+	<div class="test">
+		<div class="tt">
+			qweqweqwe
+		</div>
+	</div>
+	<button type="" id="move">移动</button>
+	<button type="" id = "reset">复位</button>
+	<script type="text/javascript">
+		$("#move").bind("click",function(){
+			$(".test").addClass("add");
+		});
+		document.getElementById("reset").addEventListener("click",function(){
+			// alert("reset");
+			$(".test").removeClass("add");
+		});
+	</script>
+	<div class="testoffset">testoffset</div>
+</body>
+</html>
