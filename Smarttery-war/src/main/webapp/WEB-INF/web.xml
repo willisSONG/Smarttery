@@ -1,0 +1,62 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <icon>
+    <small-icon>img/title.ico</small-icon>
+    <large-icon>img/title.ico</large-icon>
+  </icon>
+  <display-name>Archetype Created Web Application</display-name>
+  <context-param>
+  	<param-name>contextConfigLocation</param-name>
+  	<param-value>classpath:org/lottery/sys/config/sys-config.xml</param-value>
+  </context-param>
+  <listener>
+  	<listener-class>org.springframework.web.context.ContextLoaderListener
+  	</listener-class>
+  </listener>
+  <servlet>
+  	<servlet-name>springmvc</servlet-name>
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  	<init-param>
+  		<param-name>contextConfigLocation</param-name>
+  		<param-value>classpath:com/song/spring/config/spring-mvc-config.xml</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>TestServlet</servlet-name>
+    <display-name>TestServlet</display-name>
+    <description></description>
+    <servlet-class>cp.TestServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>Test2</servlet-name>
+    <display-name>Test2</display-name>
+    <description></description>
+    <servlet-class>cp.Test2</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>Test2</servlet-name>
+    <url-pattern>/test2</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>springmvc</servlet-name>
+  	<url-pattern>/lotteries/*</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>jsp/index.jsp</welcome-file>
+    <!-- <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file> -->
+  </welcome-file-list>
+</web-app>

@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+.leftmenuWrapper{
+	position: absolute;
+	left: -152px;
+	width: 200px;
+/* 		border:1px solid; */
+}
+.leftmenuWrapper ul{
+	margin-top:0;
+	margin-left: 0;
+	padding:0 ; 
+}
+.leftmenuWrapper ul li{
+	width:150px; 
+/* 		width:0px; */
+	margin-left:0;
+	list-style: none;
+/* 		background: #00CED1; */
+	background: #353535;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-size: 16px;
+	height: 35px;
+	line-height: 35px;
+	text-decoration: none;
+	border-bottom:1px solid #FFFFFF;
+	margin: 0;
+	transition:background 2s;
+	-o-transition: background 1s linear;
+	-webkit-transition: background 1s linear;
+	-ms-transition: background 1s linear;
+	-moz-transition: background 1s linear;
+	border-top-right-radius: 3px;
+	-moz-border-top-right-radius: 3px;
+	-ms-border-top-right-radius: 3px;
+	-webkit-border-top-right-radius: 3px;
+	-o-border-top-right-radius: 3px;
+	box-shadow: 1px 1px 5px #999999;
+	-moz-box-shadow: 1px 1px 5px #999999;
+		-webkit-box-shadow: 1px 1px 5px #999999;
+		-webkit-ms-shadow: 1px 1px 5px #999999;
+/* 		display:none; */
+}
+.leftmenuWrapper ul li a{
+	text-decoration:inherit;
+	font: inherit;
+	color: inherit;
+	display: block;
+	width: inherit;
+	height: inherit;
+}
+.leftmenuWrapper ul li a span{
+	text-decoration:inherit;
+	font: inherit;
+	height:inherit;
+	width:inherit;
+	margin-left: 30px;
+	color: inherit;
+	text-align: center;
+	letter-spacing: 2px;
+}
+.leftmenuWrapper ul li:HOVER{
+/* 		background: #FF6347; */
+	color: #FA8072;
+	cursor: pointer;
+}

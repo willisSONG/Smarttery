@@ -1,0 +1,42 @@
+@CHARSET "UTF-8";
+@IMPORT url("./common/title.css");
+@IMPORT url("./common/header.css");
+@IMPORT url("./common/common.css"); 
+@IMPORT url("./data/datagrid.css");
+@IMPORT url("./menu/slidemenu.css");
+@IMPORT url("./font/goldtime/goldtime.css");
+@IMPORT url("./font/ruibo/ruibo.css");
+@IMPORT url("./font/mheiprc/mheiprc.css");
+.dataSection{
+	position: absolute;
+	width: inherit;
+	min-height: 350px;
+	height:auto;
+	top:0px;
+	background-color: inherit;
+/* 	box-shadow : 0px 2px 5px #AAAAAA; */
+	padding-bottom: 20px;
+}
+.displayOuterWrapper{
+	position: relative;
+	width: inherit;
+	min-height:450px;
+	height: auto;
+	background-color: #F6F6F6;
+	box-shadow:0px 0px 3px #999999;
+	-o-box-shadow:0px 0px 3px #999999;
+	-moz-box-shadow:0px 0px 3px #999999;
+	-ms-box-shadow:0px 0px 3px #999999;
+	-webkit-box-shadow:0px 0px 3px #999999;
+	color:#FA8072;
+/* 	overflow: hidden; */
+/* 	padding-bottom: 120px; */
+	z-index: 0;
+}
+.logoFont{
+	font-family: serif;
+	font-size: 25px;
+	color:inherit;
+	letter-spacing: 2px;
+}
+

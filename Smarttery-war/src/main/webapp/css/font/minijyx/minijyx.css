@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+@FONT-FACE {
+	font-family: minijyx;/*迷你简幼线*/
+	src: url("minijyx.TTF") url("truetype");
+}

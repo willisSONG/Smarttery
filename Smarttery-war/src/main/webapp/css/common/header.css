@@ -1,0 +1,72 @@
+@CHARSET "UTF-8";
+@IMPORT url("../font/ruibo/ruibo.css");
+.header{
+	width: inherit;
+	height : 87px;
+	line-height : 87px;
+	position : relative;
+	background-color: #FFFFFF;
+/* 	border-top:1px solid #FFFFFF;  */
+	box-shadow:0px 0px 3px #999999;
+	-o-box-shadow:0px 0px 3px #999999;
+	-moz-box-shadow:0px 0px 3px #999999;
+	-ms-box-shadow:0px 0px 3px #999999;
+	-webkit-box-shadow:0px 0px 3px #999999;
+	font-family: ruibo;
+	text-align: center;
+	padding : 0;
+	z-index: 9;
+}
+.header .logoWrapper{
+	color: #FA8072;
+	width:242px;
+	left: 100px;
+	position: absolute;
+	height: inherit;
+	line-height: inherit;
+	text-align: center;
+}
+.header .headerLinks{
+	position: absolute;
+	height: inherit;
+	width: 896px;
+	line-height: inherit;
+	text-align: right;
+	left: 400px;
+}
+.header .headerLinks ul{
+	margin-top : 0;
+	margin-bottom: 0 ;
+	margin-right:160px;
+	width: auto;
+	max-width:940px;
+	height: inherit;
+	line-height: inherit;
+	display:inline-block;
+	position: relative;
+	padding: 0;
+}
+ .header .headerLinks li{
+	margin-left: 0;
+	display: inline-block;
+	float: right;
+	height: inherit;
+	width: 100px;
+	text-align: center;
+	text-shadow :1px 1px 1px #AAAAAA;
+	list-style: none;
+	text-decoration: none;
+	color: #FA8072;
+} 
+.header .headerLinks li a {
+	text-decoration: inherit;
+	color: inherit;
+	display:inline-block;
+	margin-top: 0;
+	font-family: ruibo;
+	font-weight : lighter;
+	font-size: 17px;
+}
+.header .headerLinks li a:HOVER{
+	color: #EEB422;
+}

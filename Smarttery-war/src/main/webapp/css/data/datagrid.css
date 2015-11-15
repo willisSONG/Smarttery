@@ -1,0 +1,170 @@
+@CHARSET "UTF-8";
+@IMPORT url("./cp.css");
+.dataGridWrapper{
+	margin-top:20px;
+	position: relative;
+	min-height: 300px;
+	height:auto;
+	width: 1080px;/*可变？*/
+	margin-left:99px;
+	box-shadow : 1px 1px 3px #AAAAAA;
+	background-color: inherit;
+/* 	border: 1px solid ; */
+/* 	overflow-x: hidden; */
+}
+.dataGridWrapper .gridtitleWrapper{
+	width: inherit;
+	height: 30px;
+	line-height:30px;
+	text-align: left;
+}
+.dataGridWrapper .gridtitleWrapper span{
+	font-size: 17px;
+/* 	font-weight: bold; */
+	font-family: goldtime;
+	text-shadow: 1px 1px 1px #AAAAAA;
+	margin-left: 50px;
+	color: #888888;
+/* 	text-align: center; */
+}
+.dataGridWrapper .datagrid{
+	width: 100%;
+	border-collapse: collapse;
+/* 	height: auto; */
+}
+.dataGridWrapper .datagrid thead{
+	border: 1px solid #FFFFFF;
+	height: 30px;
+}
+.dataGridWrapper .datagrid thead tr .tdcommon{
+	height: 30px;
+	font-family: goldtime;
+	font-size: 15px;
+	font-weight:normal;
+	color: #FFFFFF;
+	text-shadow:1px 1px 2px #999999;
+	text-transform:capitalize;
+	border: 1px solid #FFFFFF;
+	background-color: #FFD1A4;
+	text-align: center;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	-webkit-text-overflow:ellipsis;
+	-moz-text-overflow:ellipsis;
+	-ms-text-overflow:ellipsis;
+	white-space: nowrap;
+	-o-white-space: nowrap;
+	-moz-white-space: nowrap;
+	-webkit-white-space: nowrap;
+	-ms-white-space: nowrap;
+	overflow:hidden; 
+}
+.dataGridWrapper .datagrid thead tr .td1{
+	width: 10%;
+}
+.dataGridWrapper .datagrid thead tr .td2{
+	width: 10%;
+}
+.dataGridWrapper .datagrid thead tr .td3{
+	width: 10%;
+}
+.dataGridWrapper .datagrid thead tr .td4{
+	width: 30%;
+}
+.dataGridWrapper .datagrid thead tr .td5{
+	width: 15%;
+}
+.dataGridWrapper .datagrid thead tr .td6{
+	width: 10%;
+}
+.dataGridWrapper .datagrid thead tr .td7{
+	width: 5%;
+}
+.dataGridWrapper .datagrid thead tr .td8{
+	
+}
+.dataGridWrapper .datagrid tbody{
+/* 	height: 300px !important; */
+}
+.dataGridWrapper .datagrid tbody .lotterysorttitle{
+	text-align: left;
+}
+.dataGridWrapper .datagrid tbody .oddtr{
+	background-color: #EDEDED;
+}
+.dataGridWrapper .datagrid tbody .eventr{
+	background-color: #FFFFFF;
+}
+.dataGridWrapper .datagrid tbody tr{
+	height: 35px;
+	transition : background 0.3s linear;
+	-o-transition : background 0.3s linear;
+	-moz-transition : background 0.3s linear;
+	-ms-transition : background 0.3s linear;
+	-webkit-transition : background 0.3s linear;
+}
+.dataGridWrapper .datagrid tbody .oddtr:HOVER,.dataGridWrapper .datagrid tbody .eventr:HOVER{
+	background-color: #EBD3E8;
+}
+.dataGridWrapper .datagrid tbody tr td{
+	font-family: goldtime;
+	height: inherit;
+	text-align: center;
+/* 	color: #696969; */
+	border: 1px solid #FFFFFF;
+	font-size: 13px;
+	font-weight: lighter;
+}
+.lotterylink:HOVER{
+	color:#0072E3;
+}
+.bluetext{
+	color: #0072E3;
+}
+.darktext{
+	color: #696969;
+}
+.link:HOVER{
+	color:#8B1A1A;
+}
+.link{
+	text-decoration: none;
+	transition:color 0.3s linear;
+	-o-transition:color 0.3s linear;
+	-moz-transition:color 0.3s linear;
+	-ms-transition:color 0.3s linear;
+	-webkit-transition:color 0.3s linear;
+}
+.FL{
+	background-position: 0 0 ;
+}
+.TY{
+	background-position: 0 -31px;
+}
+.lotterySortImg{
+	background-image: url("../../img/lotterysort.png");
+	width: 30px;
+	height: 30px;
+	line-height: 35px;
+	background-repeat: no-repeat;
+	display:inline-block;
+}
+.centeraligntext{
+	text-align: center;
+	display: inline-block;
+	height: inherit;
+	line-height: 35px;
+}
+.lotterysortName{
+	margin-left: 20px;
+	font-family: goldtime;
+	font-weight: bold;
+	color:#e6081e;
+	text-shadow: 1px 1px 2px #BBBBBB;
+}
+.lotteryName{
+	text-decoration: none;
+	color: #0082f2;
+	font-size: 14px;
+	font-family: inherit;
+}

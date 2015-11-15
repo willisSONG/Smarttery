@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+@FONT-FACE {
+	font-family : ruibo;
+	src: url("ruibo.ttf") format('truetype');
+}

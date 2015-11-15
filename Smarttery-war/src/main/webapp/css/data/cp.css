@@ -1,0 +1,46 @@
+@CHARSET "UTF-8";
+.ballsWrapper{
+	display: inline-block;
+	height: 30px;
+	margin-bottom: 4px;
+    margin-top: 2px;
+    padding-left: 5px;
+    font-family: inherit;
+}
+.red{
+	background-image: url("../../img/balls.png") ;
+	background-position: 0 0 ;
+	background-repeat:no-repeat;
+}
+.blue{
+	background-image: url("../../img/balls.png") ;
+	background-repeat:no-repeat;
+	background-position: 0 -30px;
+}
+.ball{
+	border: none;
+	font-size: 15px;
+	line-height: 28px;
+	height: 28px;
+	width:28px;
+	font-family: inherit;
+	font-weight: bolder;;
+	color: #FFFFFF;
+	list-style: none;
+	list-style-type: none;
+	float: left;
+	margin:2px;
+	display: inline-block;
+	text-align: center;
+}
+.ball span{
+	margin:6px;
+	border: none;
+	width: 16px;
+	height: 16px;
+	line-height:16px;
+	display: inline-block;
+	font-family: arial;
+	font-size:15px;
+	text-align: center;
+}

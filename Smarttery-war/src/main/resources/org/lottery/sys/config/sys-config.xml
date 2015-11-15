@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"    
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"    
+    xmlns:context="http://www.springframework.org/schema/context"    
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+    xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/mvc
+           http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+           http://www.springframework.org/schema/tx
+       	   http://www.springframework.org/schema/tx/spring-tx.xsd
+       	   http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/data/jpa
+     	   http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+<!-- 定是任务配置成开机启动，在webxml里面如果没有onstartup=1这样类似的配置，则不能写在对对应的springmvc-servlet.xml中 -->
+<!-- 定时执行任务 begin -->
+<context:component-scan base-package="com.song.dao.basic"></context:component-scan>
+<mvc:annotation-driven/>
+<!-- jpa configuration begin-->
+<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+	<property name="persistenceXmlLocation" value="classpath:com/song/hibernate/config/persistence.xml"></property>
+	<property name="persistenceUnitName" value="persistence_1"></property>
+</bean>
+<jpa:repositories base-package="org.spring.dao" ></jpa:repositories><!-- the Dao interface package -->
+<tx:annotation-driven transaction-manager="transactionManager"/><!-- 注解事务启动 -->
+<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+	<property name="entityManagerFactory" ref="entityManagerFactory"/>
+</bean>
+<!-- jpa configuration end-->
+<bean id = "jobDetail" class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+	<property name="jobClass" value="org.system.tasks.LotteryDataFetch"></property>
+	<property name="jobDataAsMap">
+		<map>
+			<entry key="lotterySort" value="ssq"></entry>
+			<entry key="entityManagerFactory" value-ref="entityManagerFactory"></entry>
+		</map>
+	</property>
+</bean>
+<bean id = "cronTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+	<property name="jobDetail" ref="jobDetail"></property>
+	<!-- 双色球每周2，4，日 9点后跑1个小时更新数据，每一分钟 上线后改成每5分钟 0/5 -->
+	<property name="cronExpression" value="0/10 * 0-23 ? * TUE,WED,THU,FRI,SUN *"></property><!-- 测试每10秒跑一次 -->
+</bean>
+<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	<property name="triggers">
+		<list>
+			<ref bean = "cronTrigger"/>
+		</list>
+	</property>
+</bean>
+<!-- 定时执行任务 end -->
+</beans>

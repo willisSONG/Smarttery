@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+@FONT-FACE {
+	font-family: miniJTls;/*迷你简铁隶书*/
+	src: url("miniJTls.TTF") format("truetype");
+}

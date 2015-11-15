@@ -1,0 +1,5 @@
+@CHARSET "UTF-8";
+@FONT-FACE {
+	font-family: mheiprc-light;
+	src: url("MHeiPRC-Light.ttf") format('truetype');
+}
