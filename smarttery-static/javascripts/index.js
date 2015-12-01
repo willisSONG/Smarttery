@@ -121,7 +121,7 @@ require(["jquery","smartterytool"],function($,tool){
 			var x = event.changedTouches[0].clientX;
 			var y = event.changedTouches[0].clientY;
 			$(".lottery-scroll .lotterycup").removeClass("lotterycup_movex");	
-				$(".lottery-scroll .lotterydata").removeClass("lotterydata_movex");
+			$(".lottery-scroll .lotterydata").removeClass("lotterydata_movex");
 			var curnt_num = toolbox.getCurntNum();
 			if(parseInt(x)-parseInt(slideParams.originx) > 50){
 				if(curnt_num > 0){
@@ -155,7 +155,9 @@ require(["jquery","smartterytool"],function($,tool){
 				}
 			}
 		}
-
+		$(".lottery-scroll .lotterydata").css({
+			"opacity" : 1
+		});
 	},false);
 //下期预估事件
 	$(".mid_leng_button").bind({
